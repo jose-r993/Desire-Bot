@@ -1,13 +1,22 @@
 @import url("./styles/_variables.scss");
+@font-face {
+  font-family: "JetBrainsMono-Bold";
+  src: local("JetBrainsMono-Bold"), url("./fonts/JetBrainsMono-Bold.ttf");
+}
+@font-face {
+  font-family: "JetBrainsMono-Regular";
+  src: local("JetBrainsMono-Regular"), url("./fonts/JetBrainsMono-Regular.ttf");
+}
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "JetBrainsMono-Regular";
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: #000;
   background-color: #dbf0ff;
+  background: linear-gradient(0.45turn, #dbf0ff, #6dbdf2);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,12 +25,7 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {

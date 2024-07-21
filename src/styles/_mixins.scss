@@ -2,12 +2,12 @@
   padding: 1rem;
   margin: auto;
   font-size: 90px;
-  font-family: "BakbakOne";
+  font-family: "JetBrainsMono-Bold";
   position: relative;
   z-index: 2;
 }
 @mixin sub-headerStyling {
-  font-family: "SpaceGrotesk";
+  font-family: "JetBrainsMono-Bold";
   padding: 1rem;
   margin: auto;
   font-size: 51px;
@@ -15,7 +15,7 @@
   z-index: 2;
 }
 @mixin paragraphStyling {
-  font-family: "SpaceGrotesk";
+  font-family: "JetBrainsMono-Regular";
   padding: 1rem;
   margin: auto;
   font-size: 16px;
@@ -23,13 +23,15 @@
   z-index: 2;
 }
 @mixin btn-styling {
+  color: $black;
   border-radius: 10px;
   border: none;
   padding: 1rem;
   font-size: 16px;
-  @include transitionEase();
+  transition: all 0.5s ease-out, color 0.15s ease-in-out;
 
   &:hover {
+    color: $white;
     transform: scale(1.02);
   }
 }

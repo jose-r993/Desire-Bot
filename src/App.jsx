@@ -13,11 +13,7 @@ function App() {
     <>
       <Nav />
       <Hero />
-      <Feature
-        noteText="Display Your Profile"
-        headerText="Customized Profile For Users to See"
-        paragraphText="Users can display a customized profile that shows their role, permissions, and date joined! Unique user ID is included to avoid copycats :)"
-      />
+      <Feature />
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
