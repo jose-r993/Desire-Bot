@@ -1,0 +1,96 @@
+@import "./variables";
+@import "./mixins";
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+  height: 4rem;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    opacity: 0;
+
+    transform: translateX(-50vw);
+    visibility: hidden;
+    transition: all 0.5s ease-in-out, visibility 0ms ease-out;
+
+    &--open {
+      z-index: 3;
+      background-color: darken($background-color, 15%);
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  &__container {
+    z-index: 4;
+    height: 4rem;
+    position: absolute;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__span {
+    height: 37px;
+    min-width: 110px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__logo {
+    height: 40px;
+    padding-right: 1rem;
+  }
+  &__desire {
+    font-size: 32px;
+    margin: 0;
+    color: $black;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    width: 360px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+  &__item {
+    min-width: 62px;
+  }
+  &__links {
+    font-size: 16px;
+    color: $black;
+  }
+  &__button {
+    min-width: 110px;
+    font-size: 16px;
+    padding: 0.5rem;
+
+    @media (max-width: 768px) {
+      visibility: hidden;
+      transition: visibility 0ms ease-out;
+    }
+  }
+  &__button--open {
+    visibility: visible;
+  }
+}

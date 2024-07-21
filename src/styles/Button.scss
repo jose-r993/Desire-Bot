@@ -1,0 +1,33 @@
+@import "./variables";
+@import "./mixins";
+
+.button {
+  padding: 0.5rem;
+  background-color: $primary-color;
+  overflow: hidden;
+  position: relative;
+  @include btn-styling;
+
+  &:after {
+    background: $white;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: 0.25;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: -10;
+  }
+}
+
+.button:hover {
+  background-color: darken($primary-color, $amount: 10%);
+
+  &:after {
+    left: 120%;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}

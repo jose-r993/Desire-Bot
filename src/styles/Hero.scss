@@ -1,0 +1,69 @@
+@import "variables";
+@import "mixins";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 0 6rem;
+
+  @media (max-width: 768px) {
+    padding: 12rem 0 6rem;
+  }
+
+  &__subHeader {
+    @include sub-headerStyling();
+    max-width: 25rem;
+  }
+  &__paragraph {
+    @include paragraphStyling();
+    margin-bottom: 2rem;
+    max-width: 28rem;
+  }
+  &__container {
+    min-width: 200px;
+    display: flex;
+    flex-direction: row;
+    max-width: 26rem;
+    padding: 0 1rem;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__balloon {
+    position: absolute;
+    height: 125px;
+    width: auto;
+    background: none;
+    top: 60px;
+    left: -50vw;
+    @include transitionEaseSlower();
+  }
+  &__cloud {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    background: none;
+    top: 280px;
+    left: -80vw;
+    @include transitionEaseSlower();
+  }
+
+  &__featuresButton {
+    width: 100%;
+  }
+  &__discordButton {
+    background-color: darken($background-color, $amount: 10%);
+    width: 100%;
+
+    &:hover {
+      background-color: darken($background-color, $amount: 20%);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@mixin headerStyling {
+  padding: 1rem;
+  margin: auto;
+  font-size: 90px;
+  font-family: "BakbakOne";
+  position: relative;
+  z-index: 2;
+}
+@mixin sub-headerStyling {
+  font-family: "SpaceGrotesk";
+  padding: 1rem;
+  margin: auto;
+  font-size: 51px;
+  position: relative;
+  z-index: 2;
+}
+@mixin paragraphStyling {
+  font-family: "SpaceGrotesk";
+  padding: 1rem;
+  margin: auto;
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+}
+@mixin btn-styling {
+  border-radius: 10px;
+  border: none;
+  padding: 1rem;
+  font-size: 16px;
+  @include transitionEase();
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+@mixin transitionEase() {
+  transition: all 0.5s ease-out;
+}
+@mixin transitionEaseSlower() {
+  transition: all 2s ease-out;
+}
