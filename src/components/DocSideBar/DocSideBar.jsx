@@ -1,11 +1,39 @@
 import { Link } from "react-router-dom";
 import "./DocSideBar.scss";
+import { useState } from "react";
 
-function createEntry(entry) {
+function BreadCrumb({ commands, className }) {
   return (
-    <Link className="sideBar__link" to={`.${entry.path}`} key={entry.id}>
-      {entry.command}
-    </Link>
+    <>
+      {commands.map((command) => (
+        <Link
+          className={`sideBar__link ${className}`}
+          to={`.${command.path}`}
+          key={command.id}
+        >
+          {command.command}
+        </Link>
+      ))}
+    </>
+  );
+}
+
+function CommandGroup({ groupName, commands }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function toggleOpen() {
+    setIsOpen((prev) => !prev);
+  }
+
+  return (
+    <div className={`sideBar__subgroupContainer ${isOpen ? "open" : "closed"}`}>
+      <p className="sideBar__subgroupHeader" onClick={toggleOpen}>
+        {groupName}
+      </p>
+      {isOpen && (
+        <BreadCrumb className="sideBar__subgroupLink" commands={commands} />
+      )}
+    </div>
   );
 }
 
@@ -14,14 +42,18 @@ export default function DocSideBar({ commandSection, className }) {
     <div className={`sideBar ${className}`}>
       {commandSection.map((commandCategory) => {
         const categoryName = commandCategory.categoryName;
-        const commandArray = commandCategory.commands;
+        const allCommandGroups = commandCategory.commandGroups;
 
         return (
           <div className="sideBar__groupContainer" key={commandCategory.id}>
-            <p className="sideBar__header">{categoryName}</p>
-            <div className="sideBar__commandContainer">
-              {commandArray.map(createEntry)}
-            </div>
+            <p className="sideBar__category">{categoryName}</p>
+            {allCommandGroups.map((commandGroup) => (
+              <CommandGroup
+                key={commandGroup.id}
+                groupName={commandGroup.groupName}
+                commands={commandGroup.commands}
+              />
+            ))}
           </div>
         );
       })}
