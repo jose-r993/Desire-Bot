@@ -1,33 +1,35 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import Feature from "./components/Feature";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import EndUserDocsLayout from "./layouts/EndUserDocsLayout";
+import HomePage from "./pages/HomePage";
+import FeaturesPage from "./pages/FeaturesPage";
+import GuidePage from "./pages/GuidePage";
+import DynamicDocsPage from "./pages/DynamicDocsPage";
+
 import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  return (
+const router = createBrowserRouter(
+  createRoutesFromElements(
     <>
-      <Nav />
-      <Hero />
-      <Feature />
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="/features" element={<FeaturesPage />} />
+        <Route path="/guide" element={<GuidePage />} />
+      </Route>
+      <Route path="/docs" element={<EndUserDocsLayout />}>
+        <Route path=":command" element={<DynamicDocsPage />} />
+      </Route>
     </>
-  );
+  )
+);
+
+function App() {
+  return <RouterProvider router={router} />;
 }
 
 export default App;

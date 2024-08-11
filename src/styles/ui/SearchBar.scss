@@ -1,0 +1,39 @@
+@import ".././variables";
+
+.searchBar {
+  max-width: 400px;
+  position: relative;
+
+  &__image {
+    position: absolute;
+    left: 1rem;
+    top: 12px;
+  }
+
+  &__input {
+    overflow: hidden;
+    background: none;
+    border: solid #27272775 0.6mm;
+    width: 100%;
+    border-radius: 10px;
+    padding: 13px 3rem;
+    font-family: "WorkSans", sans-serif;
+    font-size: 16px;
+    color: black;
+
+    &:focus {
+      outline: none;
+      box-shadow: 2px 2px 30px #00000025;
+    }
+  }
+
+  &__kbd {
+    position: absolute;
+    right: 13px;
+    top: 9px;
+    background-color: #48484850;
+    padding: 3px 9px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+}

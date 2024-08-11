@@ -4,13 +4,13 @@
 .hero {
   display: flex;
   flex-direction: column;
-  padding: 8rem 0 6rem;
+  padding: 8rem 0;
 
   @media (max-width: 768px) {
-    padding: 12rem 0 6rem;
+    padding: 12rem 0 8rem;
   }
 
-  &__subHeader {
+  &__Header {
     @include sub-headerStyling();
     max-width: 25rem;
   }
@@ -43,6 +43,7 @@
     background: none;
     top: 60px;
     left: 80%;
+    overflow: hidden;
     @include transitionEaseSlower();
   }
   &__cloud {
@@ -60,5 +61,18 @@
   }
   &__discordButton {
     width: 100%;
+  }
+}
+
+.homeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  min-width: 110px;
+  font-size: 16px;
+  padding: 0.5rem;
+
+  @media (max-width: 768px) {
+    display: none;
   }
 }

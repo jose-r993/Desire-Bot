@@ -1,19 +1,26 @@
-@import "./variables";
+@import "variables";
 
 .list {
   list-style: none;
   display: flex;
-  width: 100%;
+  width: 360px;
   flex-direction: row;
   justify-content: space-evenly;
   padding: 0;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    width: auto;
   }
 
+  &__item {
+    min-width: 62px;
+    overflow: hidden;
+  }
   &__links {
     font-size: 16px;
+    overflow: hidden;
     color: $black;
   }
 }

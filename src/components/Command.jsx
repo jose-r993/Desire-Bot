@@ -1,5 +1,5 @@
-import Button from "./Button";
-import ButtonTwo from "./ButtonTwo";
+import Button from "./ui/Button";
+import ButtonTwo from "./ui/ButtonTwo";
 import "../styles/Command.scss";
 
 export default function Command({

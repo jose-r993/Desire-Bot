@@ -1,0 +1,29 @@
+@import "variables";
+@import "mixins";
+
+.server {
+  height: 30rem;
+  display: flex;
+
+  &__container {
+    max-width: 80rem;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin: auto auto 0;
+    // background-color: #305ce088;
+  }
+  &__header {
+    @include sub-headerStyling();
+    margin: 0;
+    padding-bottom: 0;
+  }
+  &__paragraph {
+    @include paragraphStyling();
+    text-align: start;
+  }
+  &__button {
+    margin: 1rem;
+  }
+}

@@ -7,16 +7,32 @@
   font-family: "JetBrainsMono-Regular";
   src: local("JetBrainsMono-Regular"), url("./fonts/JetBrainsMono-Regular.ttf");
 }
+@font-face {
+  font-family: "WorkSans-Regular";
+  src: local("WorkSans-Regular"), url("./fonts/WorkSans-Regular.ttf");
+}
+@font-face {
+  font-family: "WorkSans-Bold";
+  src: local("WorkSans-Bold"), url("./fonts/WorkSans-Bold.ttf");
+}
+@font-face {
+  font-family: "WorkSans-Medium";
+  src: local("WorkSans-Medium"), url("./fonts/WorkSans-Medium.ttf");
+}
+@font-face {
+  font-family: "WorkSans-SemiBold";
+  src: local("WorkSans-SemiBold"), url("./fonts/WorkSans-SemiBold.ttf");
+}
 
 :root {
-  font-family: "JetBrainsMono-Regular";
+  font-family: "WorkSans-Regular";
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: #000;
   background-color: #dbf0ff;
-  background: linear-gradient(0.45turn, #dbf0ff, #6dbdf2);
+  background: radial-gradient(#dbf0ff 40%, #96d0f6);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,6 +42,10 @@
 
 a {
   text-decoration: inherit;
+  color: #5e5e5e;
+}
+a:hover {
+  background-color: #b8b8b83b;
 }
 
 body {

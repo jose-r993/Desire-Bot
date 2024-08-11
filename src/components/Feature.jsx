@@ -17,6 +17,9 @@ export default function Feature() {
         paragraphText="Users can display a customized profile that shows their role, permissions, and date joined! Unique user ID is included to avoid copycats :)"
         imgSrc={command4}
       />
+      <span className="feature__plane">
+        <img src={plane} alt="plane" />
+      </span>
       <Command
         reversed={true}
         noteText="Display Your Profile"
@@ -24,9 +27,6 @@ export default function Feature() {
         paragraphText="Users can display a customized profile that shows their role, permissions, and date joined! Unique user ID is included to avoid copycats :)"
         imgSrc={command2}
       />
-      <span className="feature__plane">
-        <img src={plane} alt="plane" />
-      </span>
       <Command
         noteText="Display Your Profile"
         headerText="Customized Profile For Users to See"

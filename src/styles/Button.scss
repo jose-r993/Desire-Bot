@@ -6,7 +6,7 @@
   background-color: $primary-color;
   overflow: hidden;
   position: relative;
-  @include btn-styling;
+  @include btn-styling();
 
   &:after {
     background: $white;

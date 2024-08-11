@@ -1,0 +1,110 @@
+.documentation {
+  // background: radial-gradient(#dbf0ff 1%, #96d0f6);
+  background-color: #bcdbf9;
+  background-color: #b5e1fd;
+  display: flex;
+  flex-direction: row;
+  border-top: solid 0.5mm #5e5e5e25;
+
+  &__stickyContainer {
+    height: 4rem;
+    background-color: #b5e1fd;
+    top: 0;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 0.5mm #5e5e5e25;
+
+    @media (max-width: 768px) {
+      justify-content: start;
+    }
+  }
+
+  &__logoNameContainer {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__navList {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 360px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__searchBar {
+    margin: 0.5rem 1rem;
+    width: 25%;
+
+    @media (max-width: 768px) {
+      width: 55%;
+    }
+  }
+
+  &__descriptionContainer {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    gap: 3rem;
+  }
+
+  &__description {
+    width: 100%;
+    max-width: 50rem;
+    border-radius: 10px;
+    margin-top: 4rem;
+    padding: 1rem;
+
+    text-align: left;
+    h1 {
+      font-family: "WorkSans-SemiBold";
+      margin: 0 0 1rem;
+    }
+    h2 {
+      font-family: "WorkSans-SemiBold";
+      margin: 2.5rem 0 0.5rem;
+    }
+  }
+
+  &__tocContainer {
+    text-align: left;
+    padding: 4rem 1rem 0;
+    border-left: solid 0.5mm #5e5e5e25;
+    width: 50%;
+    max-width: 325px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__tocEntries {
+    position: sticky;
+    top: 5rem;
+  }
+
+  &__sideBar {
+    position: sticky;
+    top: 3rem;
+    height: 1230px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.documentation__navigationBar {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

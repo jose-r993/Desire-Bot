@@ -1,4 +1,4 @@
-import "../styles/Dropdown.scss";
+import "../../styles/Dropdown.scss";
 
 export default function Dropdown({ openNav, open }) {
   return (

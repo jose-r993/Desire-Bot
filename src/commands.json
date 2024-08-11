@@ -1,0 +1,334 @@
+{
+  "userDocs": [
+    {
+      "id": 1,
+      "categoryName": "Profile",
+      "commands": [
+        {
+          "id": 1,
+          "command": "/avatar",
+          "description": "Gets the avatar (profile picture) of a specified user or your own if no user is mentioned.",
+          "details": {
+            "usage": "/avatar (Get your own avatar)\n/avatar <@username> (Get the avatar of a mentioned user)",
+            "parameters": {
+              "user (optional)": "The user whose avatar you want to retrieve. If not provided, the command will show your avatar."
+            }
+          },
+          "path": "/avatar"
+        },
+        {
+          "id": 2,
+          "command": "/botinfo",
+          "description": "Get information about the Desire bot.",
+          "details": {
+            "usage": "/botinfo",
+            "parameters": "None"
+          },
+          "path": "/bot-info"
+        },
+        {
+          "id": 3,
+          "command": "/profile edit",
+          "description": "Allows you to edit or create your profile.",
+          "details": {
+            "usage": "/profile edit",
+            "parameters": "None"
+          },
+          "path": "/profile-edit"
+        },
+        {
+          "id": 4,
+          "command": "/profile view",
+          "description": "Allows you to view your own or another user's profile.",
+          "details": {
+            "usage": "/profile view (View your own profile)\n/profile view <@username> (View another user's profile)",
+            "parameters": {
+              "user (optional)": "The user whose profile you want to view. If not provided, your own profile will be displayed."
+            }
+          },
+          "path": "/profile-view"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "categoryName": "Server",
+      "commands": [
+        {
+          "id": 5,
+          "command": "/serverbanner",
+          "description": "Gets the server's banner image.",
+          "details": {
+            "usage": "/serverbanner",
+            "parameters": "None"
+          },
+          "path": "/server-banner"
+        },
+        {
+          "id": 6,
+          "command": "/servericon",
+          "description": "Gets the server's icon image.",
+          "details": {
+            "usage": "/servericon",
+            "parameters": "None"
+          },
+          "path": "/server-icon"
+        },
+        {
+          "id": 7,
+          "command": "/serverinfo",
+          "description": "Gets information about the current server.",
+          "details": {
+            "usage": "/serverinfo",
+            "parameters": "None"
+          },
+          "path": "/server-info"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "categoryName": "Moderation",
+      "commands": [
+        {
+          "id": 8,
+          "command": "/ban",
+          "description": "Bans a user from the server.",
+          "details": {
+            "usage": "/ban <@username> \"Reason for ban\" (Replace with the actual user and reason)",
+            "parameters": {
+              "user (required)": "The user you want to ban.",
+              "reason (optional)": "The reason for the ban."
+            },
+            "permissions": {
+              "Bot": "Ban Members",
+              "User": "Ban Members"
+            }
+          },
+          "path": "/ban"
+        },
+        {
+          "id": 9,
+          "command": "/jail",
+          "description": "Restricts a user from viewing channels in the server.",
+          "details": {
+            "usage": "/jail <@username> \"Reason for jailing\" (Replace with the actual user and reason)",
+            "parameters": {
+              "user (required)": "The user you want to jail.",
+              "reason (optional)": "The reason for the jail."
+            },
+            "permissions": {
+              "Bot": "Manage Roles",
+              "User": "Ban Members"
+            }
+          },
+          "path": "/jail"
+        },
+        {
+          "id": 10,
+          "command": "/kick",
+          "description": "Kicks a user from the server.",
+          "details": {
+            "usage": "/kick <@username> \"Reason for kick\" (Replace with the actual user and reason)",
+            "parameters": {
+              "user (required)": "The user you want to kick.",
+              "reason (optional)": "The reason for the kick."
+            },
+            "permissions": {
+              "Bot": "Kick Members",
+              "User": "Kick Members"
+            }
+          },
+          "path": "/kick"
+        },
+        {
+          "id": 11,
+          "command": "/mute",
+          "description": "Mutes a user in the server, preventing them from sending messages or speaking.",
+          "details": {
+            "usage": "/mute <@username> \"Reason for mute\" (Replace with the actual user and reason)",
+            "parameters": {
+              "user (required)": "The user you want to mute.",
+              "reason (optional)": "The reason for the mute."
+            },
+            "permissions": {
+              "Bot": "Manage Roles",
+              "User": "Moderate Members"
+            }
+          },
+          "path": "/mute"
+        },
+        {
+          "id": 12,
+          "command": "/unban",
+          "description": "Unbans a user from the server.",
+          "details": {
+            "usage": "/unban 123456789012345678 \"Reason for unbanning\" (Replace with the actual user ID and reason)",
+            "parameters": {
+              "user_id (required)": "The user ID of the user you want to unban (not a mention).",
+              "reason (optional)": "The reason for the unban."
+            },
+            "permissions": {
+              "Bot": "Ban Members",
+              "User": "Ban Members"
+            }
+          },
+          "path": "/unban"
+        },
+        {
+          "id": 13,
+          "command": "/unjail",
+          "description": "Removes the 'Jailed' role from a user, restoring their access to channels.",
+          "details": {
+            "usage": "/unjail <@username> \"Reason for unjailing\" (Replace with the actual user and reason)",
+            "parameters": {
+              "user (required)": "The user you want to unjail.",
+              "reason (optional)": "The reason for the unjail."
+            },
+            "permissions": {
+              "Bot": "Manage Roles",
+              "User": "Ban Members"
+            }
+          },
+          "path": "/unjail"
+        },
+        {
+          "id": 14,
+          "command": "/unmute",
+          "description": "Unmutes a user in the server, allowing them to send messages and speak.",
+          "details": {
+            "usage": "/unmute <@username> \"Reason for unmute\" (Replace with the actual user and reason)",
+            "parameters": {
+              "user (required)": "The user you want to unmute.",
+              "reason (optional)": "The reason for the unmute."
+            },
+            "permissions": {
+              "Bot": "Manage Roles",
+              "User": "Moderate Members"
+            }
+          },
+          "path": "/unmute"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "categoryName": "Server Management",
+      "commands": [
+        {
+          "id": 15,
+          "command": "/channel create",
+          "description": "Creates a new text or voice channel in the specified category.",
+          "details": {
+            "usage": "/channel create \"new-channel\" Text Category Name",
+            "parameters": {
+              "name (required)": "The name of the new channel.",
+              "type (required)": "The type of channel to create (\"Text\" or \"Voice\").",
+              "category (required)": "The category where the channel should be created."
+            },
+            "permissions": {
+              "Bot": "Manage Channels",
+              "User": "Manage Channels"
+            }
+          },
+          "path": "/channel-create"
+        },
+        {
+          "id": 16,
+          "command": "/channel delete",
+          "description": "Deletes the specified channel.",
+          "details": {
+            "usage": "/channel delete #channel-name (Replace with the actual channel name)",
+            "parameters": {
+              "channel (required)": "The channel you want to delete."
+            },
+            "permissions": {
+              "Bot": "Manage Channels",
+              "User": "Manage Channels"
+            }
+          },
+          "path": "/channel-delete"
+        },
+        {
+          "id": 17,
+          "command": "/channel hide",
+          "description": "Hides the specified channel from the @everyone role.",
+          "details": {
+            "usage": "/channel hide #channel-name (Replace with the actual channel name)",
+            "parameters": {
+              "channel (required)": "The channel you want to hide."
+            },
+            "permissions": {
+              "Bot": "Manage Channels",
+              "User": "Manage Channels"
+            }
+          },
+          "path": "/channel-hide"
+        },
+        {
+          "id": 18,
+          "command": "/channel unhide",
+          "description": "Unhides the specified channel, making it visible to the @everyone role.",
+          "details": {
+            "usage": "/channel unhide #channel-name (Replace with the actual channel name)",
+            "parameters": {
+              "channel (required)": "The channel you want to unhide."
+            },
+            "permissions": {
+              "Bot": "Manage Channels",
+              "User": "Manage Channels"
+            }
+          },
+          "path": "/channel-unhide"
+        },
+        {
+          "id": 19,
+          "command": "/channel lock",
+          "description": "Locks the specified channel, preventing @everyone from sending messages.",
+          "details": {
+            "usage": "/channel lock #channel-name \"Reason for locking\" (Replace with the actual channel name and reason)",
+            "parameters": {
+              "channel (required)": "The channel you want to lock.",
+              "reason (optional)": "The reason for locking the channel."
+            },
+            "permissions": {
+              "Bot": "Manage Channels",
+              "User": "Manage Channels"
+            }
+          },
+          "path": "/channel-lock"
+        },
+        {
+          "id": 20,
+          "command": "/channel unlock",
+          "description": "Unlocks the specified channel, allowing @everyone to send messages.",
+          "details": {
+            "usage": "/channel unlock #channel-name \"Reason for unlocking\" (Replace with the actual channel name and reason)",
+            "parameters": {
+              "channel (required)": "The channel you want to unlock.",
+              "reason (optional)": "The reason for unlocking the channel."
+            },
+            "permissions": {
+              "Bot": "Manage Channels",
+              "User": "Manage Channels"
+            }
+          },
+          "path": "/channel-unlock"
+        },
+        {
+          "id": 21,
+          "command": "/configure",
+          "description": "Configure the Desire bot settings for this server.",
+          "details": {
+            "usage": "/configure",
+            "parameters": "None"
+          },
+          "permissions": {
+            "User": "Administrator"
+          },
+          "path": "/configure"
+        }
+      ]
+    }
+  ]
+}

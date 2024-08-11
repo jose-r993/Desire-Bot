@@ -7,29 +7,8 @@
   overflow: hidden;
   position: relative;
   @include btn-styling;
-
-  &:after {
-    background: $white;
-    content: "";
-    height: 200px;
-    left: -45px;
-    opacity: 0.15;
-    position: absolute;
-    top: -110px;
-    transform: rotate(35deg);
-    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-    width: 60px;
-    z-index: -10;
-  }
 }
 
 .buttonTwo:hover {
   background-color: darken($background-color, $amount: 20%);
-
-  &:after {
-    left: 65px;
-    top: -75px;
-    transform: rotate(-90deg);
-    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-  }
 }
