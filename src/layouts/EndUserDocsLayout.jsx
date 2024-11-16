@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Outlet } from "react-router-dom";
 import Logo from "../components/Logo";
 import List from "../components/ui/List";
@@ -10,8 +10,9 @@ import SearchBar from "../components/ui/SearchBar";
 import "../styles/EndUserDocsLayout.scss";
 
 export default function UserDocumentation() {
-  const commandSection = commandsData.userDocs;
   const [open, setOpen] = useState();
+  const headersArr = useContext([]);
+  const commandSection = commandsData.userDocs;
 
   function openNav() {
     setOpen(!open);
@@ -19,7 +20,7 @@ export default function UserDocumentation() {
 
   return (
     <>
-      <div className="documentation__stickyContainer">
+      <header className="documentation__stickyContainer">
         <div className="documentation__logoNameContainer">
           <Logo />
           <h2 className={`nav__desire documentation__navigationBar`}>Desire</h2>
@@ -33,9 +34,9 @@ export default function UserDocumentation() {
         </nav>
         <Dropdown openNav={openNav} open={open} />
         <SearchBar className="documentation__searchBar" />
-      </div>
+      </header>
 
-      <div className="documentation">
+      <main className="documentation">
         <DocSideBar
           commandSection={commandSection}
           className="documentation__sideBar"
@@ -53,7 +54,7 @@ export default function UserDocumentation() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
       <Footer />
     </>
   );

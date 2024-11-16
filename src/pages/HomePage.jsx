@@ -4,12 +4,11 @@ import Button from "../components/ui/Button";
 import ButtonTwo from "../components/ui/ButtonTwo";
 import balloon from "../assets/balloon.png";
 import cloud from "../assets/cloud.png";
-import Nav from "../components/MainNav";
 import "../styles/HomePage.scss";
 
 export default function HomePage() {
   return (
-    <>
+    <main>
       <Button className="homeBtn" text="Add Bot" />
       <section className="hero">
         <img
@@ -30,6 +29,6 @@ export default function HomePage() {
       </section>
       <Feature />
       <Server />
-    </>
+    </main>
   );
 }

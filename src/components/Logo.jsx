@@ -4,7 +4,7 @@ import "../styles/Logo.scss";
 
 export default function Logo() {
   return (
-    <Link to="/">
+    <Link to="/" className="logoLink">
       <img className="logoImage" src={headIcon} alt="Desire robot logo" />{" "}
     </Link>
   );

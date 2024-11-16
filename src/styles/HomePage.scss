@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   padding: 8rem 0;
+  max-width: 60rem;
+  margin: auto;
 
   @media (max-width: 768px) {
     padding: 12rem 0 8rem;
@@ -36,25 +38,6 @@
       flex-direction: column;
     }
   }
-  &__balloon {
-    position: absolute;
-    height: 125px;
-    width: auto;
-    background: none;
-    top: 60px;
-    left: 80%;
-    overflow: hidden;
-    @include transitionEaseSlower();
-  }
-  &__cloud {
-    position: absolute;
-    width: 100px;
-    height: auto;
-    background: none;
-    top: 280px;
-    left: 25%;
-    @include transitionEaseSlower();
-  }
 
   &__featuresButton {
     width: 100%;
@@ -62,6 +45,38 @@
   &__discordButton {
     width: 100%;
   }
+}
+
+.hero__balloon {
+  position: relative;
+  height: 125px;
+  width: 86px;
+  background: none;
+  top: 100px;
+  left: 80%;
+  overflow: hidden;
+  @include transitionEaseSlower();
+
+  //   @media (min-width: 768px) {
+  //     background-color: red;
+  //   }
+}
+
+.hero__cloud {
+  position: relative;
+  width: 100px;
+  height: auto;
+  background: none;
+  top: 250px;
+  left: 0;
+  @include transitionEaseSlower();
+
+  //   @media (min-width: 400px) {
+  //     top: 380px;
+  //   }
+  //   @media (min-width: 768px) {
+  //     left: 200px;
+  //   }
 }
 
 .homeBtn {
@@ -75,4 +90,9 @@
   @media (max-width: 768px) {
     display: none;
   }
+}
+
+.container {
+  max-width: 80rem;
+  margin: auto;
 }

@@ -1,4 +1,4 @@
-import ButtonTwo from "./ui/ButtonTwo";
+import Button from "./ui/Button";
 import "../styles/Server.scss";
 
 export default function Server() {
@@ -11,7 +11,7 @@ export default function Server() {
           more. Our team is here to assist you with any questions or issues you
           may have.
         </p>
-        <ButtonTwo className="server__button" text="Join Server" />
+        <button className="server__button">Join Server</button>
       </div>
     </section>
   );

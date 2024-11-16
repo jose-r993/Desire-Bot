@@ -4,6 +4,7 @@ import List from "../components/ui/List";
 import Dropdown from "../components/ui/Dropdown";
 import Footer from "../components/Footer";
 import { useState } from "react";
+import "../styles/Nav.scss";
 
 export default function MainLayout() {
   const [open, setOpen] = useState();
@@ -13,7 +14,7 @@ export default function MainLayout() {
   }
   return (
     <>
-      <section className="navigation">
+      <header className="navigation">
         <div className="nav__container">
           <Logo />
           <h2 className={`nav__desire`}>Desire</h2>
@@ -22,7 +23,7 @@ export default function MainLayout() {
           <List />
         </nav>
         <Dropdown openNav={openNav} open={open} />
-      </section>
+      </header>
       <Outlet />
       <Footer />
     </>
