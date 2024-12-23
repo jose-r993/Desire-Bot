@@ -1,96 +1,23 @@
 export default function DocsBan() {
   return (
     <>
-      <h1>Test</h1>
+      <h1>/ban [user_id] [reason]</h1>
+      <h2>Description</h2>
+      <p>Bans a user from the server.</p>
+      <h2>Usage</h2>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque quam
-        voluptates est omnis tempore ipsum. Iure aliquid, magnam amet repellat
-        dicta quam perspiciatis placeat ipsa officiis, recusandae eos, mollitia
-        architecto.
+        /ban 123456789012345678 "Reason for banning" (Replace with the
+        actual user ID and reason)
       </p>
-      <h2>Test Sub-Header</h2>
+      <h2>Parameters</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
-        repellat ullam, impedit earum, hic, rerum quibusdam perspiciatis
-        laudantium ipsum fugiat non eaque vero deleniti vel beatae harum magnam
-        pariatur?
+        user_id (required): The user ID of the user you want to ban (not a
+        mention).
       </p>
-      <h2>Test Sub-Header</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
-        repellat ullam, impedit earum, hic, rerum quibusdam perspiciatis
-        laudantium ipsum fugiat non eaque vero deleniti vel beatae harum magnam
-        pariatur?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
-        repellat ullam, impedit earum, hic, rerum quibusdam perspiciatis
-        laudantium ipsum fugiat non eaque vero deleniti vel beatae harum magnam
-        pariatur?
-      </p>
-      <h2>Test Sub-Header</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
-        repellat ullam, impedit earum, hic, rerum quibusdam perspiciatis
-        laudantium ipsum fugiat non eaque vero deleniti vel beatae harum magnam
-        pariatur?
-      </p>
-      <h2>Test Sub-Header</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
-        repellat ullam, impedit earum, hic, rerum quibusdam perspiciatis
-        laudantium ipsum fugiat non eaque vero deleniti vel beatae harum magnam
-        pariatur?
-      </p>
-      <h2>Test Sub-Header</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
-        repellat ullam, impedit earum, hic, rerum quibusdam perspiciatis
-        laudantium ipsum fugiat non eaque vero deleniti vel beatae harum magnam
-        pariatur?
-      </p>
-      <h2>Test Sub-Header</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
-        repellat ullam, impedit earum, hic, rerum quibusdam perspiciatis
-        laudantium ipsum fugiat non eaque vero deleniti vel beatae harum magnam
-        pariatur?
-      </p>
-      <h2>Test Sub-Header</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
-        repellat ullam, impedit earum, hic, rerum quibusdam perspiciatis
-        laudantium ipsum fugiat non eaque vero deleniti vel beatae harum magnam
-        pariatur?
-      </p>
-      <h2>Test Sub-Header</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
-        repellat ullam, impedit earum, hic, rerum quibusdam perspiciatis
-        laudantium ipsum fugiat non eaque vero deleniti vel beatae harum magnam
-        pariatur?
-      </p>
-      <h2>Test Sub-Header</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
-        repellat ullam, impedit earum, hic, rerum quibusdam perspiciatis
-        laudantium ipsum fugiat non eaque vero deleniti vel beatae harum magnam
-        pariatur?
-      </p>
-      <h2>Test Sub-Header</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
-        repellat ullam, impedit earum, hic, rerum quibusdam perspiciatis
-        laudantium ipsum fugiat non eaque vero deleniti vel beatae harum magnam
-        pariatur?
-      </p>
-      <h2>Test Sub-Header</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque officiis
-        repellat ullam, impedit earum, hic, rerum quibusdam perspiciatis
-        laudantium ipsum fugiat non eaque vero deleniti vel beatae harum magnam
-        pariatur?
-      </p>
+      <p>reason (optional): The reason for the ban.</p>
+      <h2>Required Permissions</h2>
+      <p>Bot: Ban Members</p>
+      <p>User: Ban Members</p>
     </>
   );
 }

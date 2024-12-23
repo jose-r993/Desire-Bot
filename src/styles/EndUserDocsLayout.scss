@@ -89,6 +89,9 @@
       display: none;
     }
   }
+  &__tocItem {
+    display: block;
+  }
   &__tocEntries {
     position: sticky;
     top: 5rem;

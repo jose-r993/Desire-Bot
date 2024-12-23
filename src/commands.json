@@ -73,38 +73,42 @@
           "id": 4,
           "groupName": "User",
           "commands": [
+            { "id": 8,
+              "command": "/userinfo",
+              "path": "/user-info"
+            },
             {
-              "id": 8,
+              "id": 9,
               "command": "/ban",
               "path": "/ban"
             },
             {
-              "id": 9,
+              "id": 10,
               "command": "/jail",
               "path": "/jail"
             },
             {
-              "id": 10,
+              "id": 11,
               "command": "/kick",
               "path": "/kick"
             },
             {
-              "id": 11,
+              "id": 12,
               "command": "/mute",
               "path": "/mute"
             },
             {
-              "id": 12,
+              "id": 13,
               "command": "/unban",
               "path": "/unban"
             },
             {
-              "id": 13,
+              "id": 14,
               "command": "/unjail",
               "path": "/unjail"
             },
             {
-              "id": 14,
+              "id": 15,
               "command": "/unmute",
               "path": "/unmute"
             }
@@ -121,32 +125,32 @@
           "groupName": "Channel",
           "commands": [
             {
-              "id": 15,
+              "id": 16,
               "command": "/channel create",
               "path": "/channel-create"
             },
             {
-              "id": 16,
+              "id": 17,
               "command": "/channel delete",
               "path": "/channel-delete"
             },
             {
-              "id": 17,
+              "id": 18,
               "command": "/channel hide",
               "path": "/channel-hide"
             },
             {
-              "id": 18,
+              "id": 19,
               "command": "/channel unhide",
               "path": "/channel-unhide"
             },
             {
-              "id": 19,
+              "id": 20,
               "command": "/channel lock",
               "path": "/channel-lock"
             },
             {
-              "id": 20,
+              "id": 21,
               "command": "/channel unlock",
               "path": "/channel-unlock"
             }
@@ -157,7 +161,7 @@
           "groupName": "Configuration",
           "commands": [
             {
-              "id": 21,
+              "id": 22,
               "command": "/configure",
               "path": "/configure"
             }

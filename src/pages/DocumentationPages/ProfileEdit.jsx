@@ -2,7 +2,7 @@ export default function ProfileEdit() {
   return (
     <>
       <h1>/profile edit</h1>
-      <h2>Description</h2>
+      <h2 id="profile-edit-description">Description</h2>
       <p>
         The <code>/profile edit</code> command allows users to create or modify
         their personal profiles within the application. This feature enables
@@ -15,14 +15,14 @@ export default function ProfileEdit() {
         is straightforward, offering a user-friendly interface for making these
         changes.
       </p>
-      <h2>Usage:</h2>
+      <h2 id="profile-edit-usage">Usage</h2>
       <p>
         To use the <code>/profile edit</code> command, simply type{" "}
         <code>/profile edit</code> in the command input field and press Enter.
         This will open the profile editor, where you can make your desired
         changes.
       </p>
-      <h2>Parameters:</h2>
+      <h2 id="profile-edit-parameters">Parameters</h2>
       <p>
         The <code>/profile edit</code> command does not require any additional
         parameters. However, once the editor is open, you can modify the
@@ -45,33 +45,6 @@ export default function ProfileEdit() {
           other contact details.
         </li>
       </ul>
-      <h2>Examples:</h2>
-      <p>
-        Here are some examples of how to use the <code>/profile edit</code>{" "}
-        command:
-      </p>
-      <ul>
-        <li>
-          <code>/profile edit</code> - Opens the profile editor where you can
-          update your profile details.
-        </li>
-        <li>
-          After entering the command, navigate through the editor to update your
-          display name, add a new bio, or change your profile picture.
-        </li>
-      </ul>
-      <h2>Additional Information:</h2>
-      <p>
-        It is important to keep your profile information accurate and
-        up-to-date. This helps other users recognize and connect with you more
-        easily. Regular updates to your profile can also enhance your experience
-        within the community by reflecting your latest activities and interests.
-      </p>
-      <p>
-        For more details on how to use the profile editor and manage your
-        personal information, please refer to the user guide or contact support
-        for assistance.
-      </p>
     </>
   );
 }

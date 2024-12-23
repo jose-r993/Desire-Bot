@@ -1,8 +1,3 @@
-# React + Vite
+This project is a website for Desire, a discord moderation and server partnering bot that I have made. Most of my focus for this project was making it semi-easy for my friend to update content without having to do too much in the front-end. The website uses React for most of its functionality and SASS for its styling.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Currently I am working on the documentation page and more specifically, the search functionality. I have been able to do a fuzzy search that works pretty well, and I plan to go from the current printing results in console log to showing results below the search bar.

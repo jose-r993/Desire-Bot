@@ -34,6 +34,8 @@
   background-color: #dbf0ff;
   background: radial-gradient(#dbf0ff 40%, #96d0f6);
 
+  scroll-padding-top: 4rem;
+  scroll-behavior: smooth;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "avatar",
+    "title": "/avatar [user]",
+    "description": "Gets the avatar (profile picture) of a specified user or your own if no user is mentioned.",
+    "usage": "/avatar (Get your own avatar)\n/avatar @username (Get the avatar of a mentioned user)",
+    "parameters": "user (optional): The user whose avatar you want to retrieve. If not provided, the command will show your avatar.",
+    "url": "/docs/avatar"
+  },
+  {
+    "id": "ban",
+    "title": "/ban [user_id] [reason]",
+    "description": "Bans a user from the server.",
+    "usage": "/ban 123456789012345678 \"Reason for banning\" (Replace with the actual user ID and reason)",
+    "parameters": "user_id (required): The user ID of the user you want to ban (not a mention).\nreason (optional): The reason for the ban.",
+    "requiredPermissions": "Bot: Ban Members\nUser: Ban Members",
+    "url": "/docs/ban"
+  },
+  {
+    "id": "botinfo",
+    "title": "/botinfo [user]",
+    "description": "Get information about the Desire bot.",
+    "usage": "/botinfo",
+    "parameters": "None",
+    "url": "/docs/botinfo"
+  },
+  {
+    "id": "channel-create",
+    "title": "/channel create [name] [type] [category]",
+    "description": "Creates a new text or voice channel in the specified category.",
+    "usage": "/channel create \"new-channel\" Text Category Name",
+    "parameters": "name (required): The name of the new channel.\ntype (required): The type of channel to create (\"Text\" or \"Voice\").\ncategory (required): The category where the channel should be created.",
+    "requiredPermissions": "Bot: Manage Channels\nUser: Manage Channels",
+    "url": "/docs/channel-create"
+  },  
+  {
+    "id": "channel-delete",
+    "title": "/channel delete [channel]",
+    "description": "Deletes the specified channel.",
+    "usage": "/channel delete #channel-name (Replace with the actual channel name)",
+    "parameters": "channel (required): The channel you want to delete.",
+    "requiredPermissions": "Bot: Manage Channels\nUser: Manage Channels",
+    "url": "/docs/channel-delete"
+  },
+  {
+    "id": "channel-hide",
+    "title": "/channel hide [channel]",
+    "description": "Hides the specified channel from the @everyone role.",
+    "usage": "/channel hide #channel-name (Replace with the actual channel name)",
+    "parameters": "channel (required): The channel you want to hide.",
+    "requiredPermissions": "Bot: Manage Channels\nUser: Manage Channels",
+    "url": "/docs/channel-hide"
+  },
+  {
+    "id": "channel-lock",
+    "title": "/channel lock [channel] [reason]",
+    "description": "Locks the specified channel, preventing @everyone from sending messages.",
+    "usage": "/channel lock #channel-name \"Reason for locking\" (Replace with the actual channel name and reason)",
+    "parameters": "channel (required): The channel you want to lock.\nreason (optional): The reason for locking the channel.",
+    "requiredPermissions": "Bot: Manage Channels\nUser: Manage Channels",
+    "url": "/docs/channel-lock"
+  },
+  {
+    "id": "channel-unhide",
+    "title": "/channel unhide [channel]",
+    "description": "Unhides the specified channel, making it visible to the @everyone role.",
+    "usage": "/channel unhide #channel-name (Replace with the actual channel name)",
+    "parameters": "channel (required): The channel you want to unhide.",
+    "requiredPermissions": "Bot: Manage Channels\nUser: Manage Channels",
+    "url": "/docs/channel-unhide"
+  },
+  {
+    "id": "channel-unlock",
+    "title": "/channel unlock [channel]",
+    "description": "Unlocks the specified channel, allowing @everyone to send messages.",
+    "usage": "/channel unlock #channel-name \"Reason for unlocking\" (Replace with the actual channel name and reason)",
+    "parameters": "channel (required): The channel you want to unlock.\nreason (optional): The reason for unlocking the channel.",
+    "requiredPermissions": "Bot: Manage Channels\nUser: Manage Channels",
+    "url": "/docs/channel-unlock"
+  },  
+  {
+    "id": "configure",
+    "title": "/configure",
+    "description": "Configure the Desire bot settings for this server.",
+    "usage": "/configure",
+    "parameters": "None",
+    "requiredPermissions": "User: Administrator",
+    "url": "/docs/configure"
+  },
+  {
+    "id": "jail",
+    "title": "/jail [user] [reason]",
+    "description": "Restricts a user from viewing channels in the server.",
+    "usage": "/jail [@username] \"Reason for jailing\" (Replace with the actual user and reason)",
+    "parameters": "user (required): The user you want to jail.\nreason (optional): The reason for the jail.",
+    "requiredPermissions": "Bot: Manage Roles\nUser: Ban Members",
+    "url": "/docs/jail"
+  },
+  {
+    "id": "kick",
+    "title": "/kick [user] [reason]",
+    "description": "Kicks a user from the server.",
+    "usage": "/kick [@username] \"Reason for kick\" (Replace with the actual user and reason)",
+    "parameters": "user (required): The user you want to jail.\nreason (optional): The reason for the jail.",
+    "requiredPermissions": "Bot: Kick Members\nUser: Kick Members",
+    "url": "/docs/kick"
+  },
+  {
+    "id": "mute",
+    "title": "/mute [user] [reason]",
+    "description": "Mutes a user in the server, preventing them from sending messages or speaking.",
+    "usage": "/mute [@username] \"Reason for mute\" (Replace with the actual user and reason)",
+    "parameters": "user (required): The user you want to mute.\nreason (optional): The reason for the mute.",
+    "requiredPermissions": "Bot: Manage Roles\nUser: Moderate Members",
+    "url": "/docs/mute"
+  },
+  {
+    "id": "profile-edit",
+    "title": "/profile edit",
+    "description": "The /profile edit command allows users to create or modify their personal profiles within the application. This feature enables users to update their display name, bio, profile picture, and other personal details to reflect their current preferences. With this command, users can ensure their profiles are up-to-date and accurately represent them to other members of the community. The process is straightforward, offering a user-friendly interface for making these changes.",
+    "usage": "To use the /profile edit command, simply type /profile edit in the command input field and press Enter. This will open the profile editor, where you can make your desired changes.",
+    "parameters": "The /profile edit command does not require any additional parameters. However, once the editor is open, you can modify the following fields: Display Name: Your name as it will appear to other users. Bio: A short description about yourself. Profile Picture: Upload or change your profile picture. Contact Information: Update your email address or other contact details.",    
+    "requiredPermissions": "Bot: Manage Roles\nUser: Moderate Members",
+    "url": "/docs/profile-edit"
+  },           
+  {
+    "id": "profile-view",
+    "title": "/profile view [user]",
+    "description": "Allows you to view your own or another user's profile.",
+    "usage": "/profile view (View your own profile)\n/profile view [@username] (View another user's profile)",
+    "parameters": "user (optional): The user whose profile you want to view. If not provided, your own profile will be displayed.",
+    "url": "/docs/profile-view"
+  },
+  {
+    "id": "server-banner",
+    "title": "/serverbanner",
+    "description": "Gets the server's banner image.",
+    "usage": "/serverbanner",
+    "parameters": "None",
+    "url": "/docs/server-banner"
+  },
+  {
+    "id": "server-icon",
+    "title": "/servericon",
+    "description": "Gets the server's icon image.",
+    "usage": "/servericon",
+    "parameters": "None",
+    "url": "/docs/server-icon"
+  },
+  {
+    "id": "server-info",
+    "title": "/serverinfo",
+    "description": "Gets information about the current server.",
+    "usage": "/serverinfo",
+    "parameters": "None",
+    "url": "/docs/server-info"
+  },
+  {
+    "id": "unban",
+    "title": "/unban [user_id] [reason]",
+    "description": "Unbans a user from the server.",
+    "usage": "/unban 123456789012345678 \"Reason for unbanning\" (Replace with the actual user ID and reason)",
+    "parameters": "user_id (required): The user ID of the user you want to unban (not a mention).\nreason (optional): The reason for the unban.",
+    "requiredPermissions": "Bot: Ban Members\nUser: Ban Members",
+    "url": "/docs/unban"
+  },  
+  {
+    "id": "unjail",
+    "title": "/unjail [user] [reason]",
+    "description": "Removes the \"Jailed\" role from a user, restoring their access to channels.",
+    "usage": "/unban 123456789012345678 \"Reason for unbanning\" (Replace with the actual user ID and reason)",
+    "parameters": "user (required): The user you want to unjail.\nreason (optional): The reason for the unjail.",
+    "requiredPermissions": "Bot: Manage Roles\nUser: Ban Members",
+    "url": "/docs/unjail"
+  },
+  {
+    "id": "unmute",
+    "title": "/unmute [user] [reason]",
+    "description": "Unmutes a user in the server, allowing them to send messages and speak.",
+    "usage": "/unmute [@username] \"Reason for unmute\" (Replace with the actual user and reason)",
+    "parameters": "user (required): The user you want to unmute.\nreason (optional): The reason for the unmute.",
+    "requiredPermissions": "Bot: Manage Roles\nUser: Moderate Members",
+    "url": "/docs/unmute"
+  },
+  {
+    "id": "userinfo",
+    "title": "/userinfo [user]",
+    "description": "Get information about a user or yourself if no user is mentioned.",
+    "usage": "/userinfo (Get your own information)\n/userinfo [@username] (Get the information of a mentioned user)",
+    "parameters": "user (optional): The user whose information you want to view. If not provided, your information will be displayed.",
+    "url": "/docs/userinfo"
+  }  
+]
+  
