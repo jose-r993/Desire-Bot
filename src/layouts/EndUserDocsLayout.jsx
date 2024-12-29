@@ -8,7 +8,6 @@ import commandsData from "../commands.json";
 import DocSideBar from "../components/DocSideBar/DocSideBar";
 import SearchBar from "../components/ui/SearchBar";
 import "../styles/EndUserDocsLayout.scss";
-import Fuse from "fuse.js";
 import docsContentList from "../../public/documentationContent.json"
 
 
@@ -17,8 +16,9 @@ import docsContentList from "../../public/documentationContent.json"
 export default function UserDocumentation() {
   const [open, setOpen] = useState(false);
   const [headers, setHeaders] = useState([]);
-  const [searchText, setSearchText] = useState("");
   const [activeHeader, setActiveHeader] = useState("");
+  const location = useLocation();
+
   const commandSection = commandsData.userDocs;
   const options = {
     minMatchCharLength: 3,
@@ -35,7 +35,6 @@ export default function UserDocumentation() {
       "url" 
     ]
   };
-  const fuse = new Fuse(docsContentList, options);
   
   function openNav() {
     setOpen(!open);
@@ -78,21 +77,8 @@ export default function UserDocumentation() {
   };
 
   useEffect(() => {
-    const findText = setTimeout(() => {
-      const tempList = fuse.search(searchText, {limit: 3})
-      tempList.forEach((result) => {
-        const location = result.matches[0].key;
-        const leftIndex = result.matches[0].indices[0][0];
-        const rightIndex = result.matches[0].indices[0][1] + 1;
-        const slicedString = result.item[location].substring(leftIndex, rightIndex);
-        console.log(slicedString);
-      })
-      console.log(tempList);
-    }, 400)
-
-    return () => clearTimeout(findText)
-
-  }, [searchText])
+    extractHeaders();
+  }, [location]);
 
 
   return (
@@ -110,7 +96,7 @@ export default function UserDocumentation() {
           <List />
         </nav>
         <Dropdown openNav={openNav} open={open} />
-        <SearchBar className="documentation__searchBar" onChange={(e) => setSearchText(e.target.value)} />
+        <SearchBar className="documentation__searchBar" />
       </header>
 
       <main className="documentation">

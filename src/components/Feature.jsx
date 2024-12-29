@@ -15,7 +15,9 @@ export default function Feature() {
         noteText="Display Your Profile"
         headerText="Customized Profile For Users to See"
         paragraphText="Users can display a customized profile that shows their role, permissions, and date joined! Unique user ID is included to avoid copycats :)"
+        btnText="Testing a longer bit of string text"
         imgSrc={command4}
+        hideBtn={true}
       />
       <span className="feature__plane">
         <img src={plane} alt="plane" />
@@ -25,6 +27,7 @@ export default function Feature() {
         noteText="Display Your Profile"
         headerText="Customized Profile For Users to See"
         paragraphText="Users can display a customized profile that shows their role, permissions, and date joined! Unique user ID is included to avoid copycats :)"
+        btnText="See Docs"
         imgSrc={command2}
       />
       <Command
@@ -32,12 +35,16 @@ export default function Feature() {
         headerText="Customized Profile For Users to See"
         paragraphText="Users can display a customized profile that shows their role, permissions, and date joined! Unique user ID is included to avoid copycats :)"
         imgSrc={command3}
+        btnText="Learn More"
+        hideBtn={true}
       />
       <Command
         reversed={true}
         noteText="Display Your Profile"
         headerText="Customized Profile For Users to See"
         paragraphText="Users can display a customized profile that shows their role, permissions, and date joined! Unique user ID is included to avoid copycats :)"
+        btnText="Learn More"
+        hideBtn={true}
         imgSrc={command5}
       />
     </>

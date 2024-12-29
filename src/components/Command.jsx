@@ -8,6 +8,8 @@ export default function Command({
   paragraphText,
   reversed,
   imgSrc,
+  hideBtn,
+  btnText,
 }) {
   return (
     <div className={`command ${reversed ? "command-reverse" : ""}`}>
@@ -16,8 +18,8 @@ export default function Command({
         <h2 className="command__headerText">{headerText}</h2>
         <p className="command__paragraphText">{paragraphText}</p>
         <div className="command__buttonContainer">
-          <Button text="Add To Discord" className="discord__button" />
-          <ButtonTwo text="See Docs" className="docs__button" />
+          <Button text="Add To Discord" className={`discord__button ${hideBtn && "discord__button-hidden"}`} />
+          <ButtonTwo text={btnText} className="docs__button" />
         </div>
       </div>
       <img

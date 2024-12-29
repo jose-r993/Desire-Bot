@@ -47,7 +47,8 @@ a {
   color: #5e5e5e;
 }
 a:hover {
-  background-color: #b8b8b83b;
+  color: #757575;
+  transition: color 250ms ease-in-out;
 }
 
 body {
