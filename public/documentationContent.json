@@ -22,7 +22,7 @@
     "description": "Get information about the Desire bot.",
     "usage": "/botinfo",
     "parameters": "None",
-    "url": "/docs/botinfo"
+    "url": "/docs/bot-info"
   },
   {
     "id": "channel-create",
@@ -188,7 +188,7 @@
     "description": "Get information about a user or yourself if no user is mentioned.",
     "usage": "/userinfo (Get your own information)\n/userinfo [@username] (Get the information of a mentioned user)",
     "parameters": "user (optional): The user whose information you want to view. If not provided, your information will be displayed.",
-    "url": "/docs/userinfo"
+    "url": "/docs/user-info"
   }  
 ]
   

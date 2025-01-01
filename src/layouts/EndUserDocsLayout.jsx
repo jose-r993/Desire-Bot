@@ -8,7 +8,6 @@ import commandsData from "../commands.json";
 import DocSideBar from "../components/DocSideBar/DocSideBar";
 import SearchBar from "../components/ui/SearchBar";
 import "../styles/EndUserDocsLayout.scss";
-import docsContentList from "../../public/documentationContent.json"
 
 
 
@@ -16,25 +15,8 @@ import docsContentList from "../../public/documentationContent.json"
 export default function UserDocumentation() {
   const [open, setOpen] = useState(false);
   const [headers, setHeaders] = useState([]);
-  const [activeHeader, setActiveHeader] = useState("");
   const location = useLocation();
-
   const commandSection = commandsData.userDocs;
-  const options = {
-    minMatchCharLength: 3,
-    includeScore: true,
-    includeMatches: true,
-    ignoreFieldNorm: true,
-    threshold: 0.7,
-    keys: [ 
-      "title",
-      "description", 
-      "usage", 
-      "parameters", 
-      "requiredPermissions", 
-      "url" 
-    ]
-  };
   
   function openNav() {
     setOpen(!open);
@@ -44,22 +26,9 @@ export default function UserDocumentation() {
     const descriptionElement = document.querySelector(".documentation__description");
   
     if (!descriptionElement) {
-      console.warn("Description element not found. Skipping header extraction.");
       setHeaders([]);
       return;
     }
-  
-    const headerMain = descriptionElement.querySelector("h1");
-    if (!headerMain) {
-      console.warn("Main header (h1) not found.");
-      setHeaders([]);
-      return;
-    }
-  
-    const headerText = headerMain.textContent
-      .replace(/ /g, "-")
-      .replace("/", "")
-      .replace(/[\[\]]/g, "");
   
     const headerElements = descriptionElement.querySelectorAll("h2, h3");
     const headersArray = Array.from(headerElements).map((header) => {
@@ -79,7 +48,6 @@ export default function UserDocumentation() {
   useEffect(() => {
     extractHeaders();
   }, [location]);
-
 
   return (
     <div className="docs">
@@ -117,9 +85,7 @@ export default function UserDocumentation() {
                 <a
                   key={header.id}
                   href={`#${header.id}`}
-                  className={`documentation__tocItem ${
-                    activeHeader === header.id ? "active" : ""
-                  }`}
+                  className="documentation__tocItem"
                 >
                   {header.text}
                 </a>

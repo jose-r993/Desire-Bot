@@ -1,26 +1,21 @@
 @use "sass:color";
-@use "./variables";
+$documentation-background-color: #b5e1fd;
 
 .documentation {
-  // background: radial-gradient(#dbf0ff 1%, #96d0f6);
   background-color: #bcdbf9;
-  $documentation-background-color: #b5e1fd;
-
   display: flex;
   flex-direction: row;
-  // border-top: solid 0.5mm #5e5e5e25;
   min-height: calc(100vh - 24rem);
 
   &__stickyContainer {
     z-index: 1;
     height: 4rem;
-    background-color: color.scale($documentation-background-color, $lightness: -10%);
+    background-color: color.scale($documentation-background-color, $lightness: -5%);
     top: 0;
     position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // border-bottom: solid 0.5mm #5e5e5e25;
 
     @media (max-width: 768px) {
       justify-content: start;

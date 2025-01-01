@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import FeaturesPage from "./pages/FeaturesPage";
 import GuidePage from "./pages/GuidePage";
 import DynamicDocsPage from "./pages/DynamicDocsPage";
+import DocsPage from "./pages/DocsPage";
 
 import "./App.css";
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
         <Route path="/guide" element={<GuidePage />} />
       </Route>
       <Route path="/docs" element={<EndUserDocsLayout />}>
+        <Route index element={<DocsPage />} />
         <Route path=":command" element={<DynamicDocsPage />} />
       </Route>
     </>
