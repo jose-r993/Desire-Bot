@@ -65,22 +65,22 @@ export default function SearchBar({ className }) {
       
       {searchList.length > 0 && (
         <>
-          <div className="searchBar__suggested">Suggested</div>
           <div className="searchBar__resultBox">
-          {searchList.map((result, index) => {
-            const link = result.item.url;
-            const location = result.matches[0].key;
-            const leftIndex = result.matches[0].indices[0][0];
-            const rightIndex = result.matches[0].indices[0][1] + 1;
-            const slicedString = result.item[location].substring(leftIndex - 10, rightIndex + 10).trim();
+            <div className="searchBar__suggested">Suggested</div>
+            {searchList.map((result, index) => {
+              const link = result.item.url;
+              const location = result.matches[0].key;
+              const leftIndex = result.matches[0].indices[0][0];
+              const rightIndex = result.matches[0].indices[0][1] + 1;
+              const slicedString = result.item[location].substring(leftIndex - 10, rightIndex + 10).trim();
 
-            return (
-              <Link key={index} className="searchBar__resultBox__item" to={link}>
-                <img src={SearchIcon} alt="Result Icon" className="searchBar__resultBox__item__icon" />
-                <span>{slicedString}</span>
-              </Link>
-            )
-          })}
+              return (
+                <Link key={index} className="searchBar__resultBox__item" to={link}>
+                  <img src={SearchIcon} alt="Result Icon" className="searchBar__resultBox__item__icon" />
+                  <span>{slicedString}</span>
+                </Link>
+              )
+            })}
           </div>
         </>
       )}

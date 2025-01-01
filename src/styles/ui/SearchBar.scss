@@ -3,14 +3,13 @@
 
 .searchBar {
   max-width: 400px;
-  position: absolute;
-  right: 1rem;
   z-index: 2;
+  position: relative;
 
   &__icon {
     position: absolute;
-    left: 1rem;
     top: 12px;
+    left: 1rem;
   }
 
   &__input {
@@ -42,8 +41,8 @@
 
   &__kbd {
     position: absolute;
-    right: 13px;
     top: 9px;
+    right: 13px;
     background-color: #48484850;
     padding: 3px 9px;
     border-radius: 5px;
@@ -59,7 +58,6 @@
   }
 
   &__resultBox {
-    text-align: left;
     position: absolute;
     top: 100%;
     left: 0;
@@ -74,7 +72,6 @@
 
     &__item {
       display: flex;
-      align-items: center;
       padding: 10px;
       font-size: 14px;
       color: #333;
