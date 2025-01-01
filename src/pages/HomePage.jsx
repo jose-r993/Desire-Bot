@@ -23,7 +23,7 @@ export default function HomePage() {
           User Experience
         </p>
         <div className="hero__container">
-          <ButtonTwo className="hero__discordButton" text="Explore Features" />
+          <ButtonTwo className="hero__discordButton" text="Explore Features" linkSrc="/features"/>
           <Button className="hero__featuresButton" text="Add To Discord" />
         </div>
       </section>
