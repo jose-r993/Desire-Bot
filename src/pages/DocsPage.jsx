@@ -16,19 +16,19 @@ export default function DocsPage() {
         <div className="docs__quickLinks__leftContainer">
           <h2>Quick Links</h2>
           <div className="docs__commands">
-            <Link to="/docs/commands/avatar" className="docs__command">
+            <Link to="/docs/avatar" className="docs__command">
               <h3>/avatar</h3>
               <p>Fetch a user's avatar or your own.</p>
             </Link>
-            <Link to="/docs/commands/mute" className="docs__command">
+            <Link to="/docs/mute" className="docs__command">
               <h3>/mute</h3>
               <p>Mute a user in the server.</p>
             </Link>
-            <Link to="/docs/commands/kick" className="docs__command">
+            <Link to="/docs/kick" className="docs__command">
               <h3>/kick</h3>
               <p>Kick a disruptive user.</p>
             </Link>
-            <Link to="/docs/commands/server-info" className="docs__command">
+            <Link to="/docs/server-info" className="docs__command">
               <h3>/serverinfo</h3>
               <p>Get detailed information about your server.</p>
             </Link>

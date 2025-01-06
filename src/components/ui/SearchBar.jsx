@@ -13,10 +13,10 @@ export default function SearchBar({ className }) {
     ignoreLocation: true,
     includeMatches: true,
     ignoreFieldNorm: true,
-    minMatchCharLength: 3,
+    minMatchCharLength: 2,
     keys: [ 
-      "description", 
       "title",
+      "description", 
       "usage", 
       "parameters", 
       "requiredPermissions",
@@ -26,7 +26,7 @@ export default function SearchBar({ className }) {
   
   useEffect(() => {
     const findText = setTimeout(() => {
-      setSearchList(fuse.search(searchText, {limit: 3}));
+      setSearchList(fuse.search(searchText, {limit: 5}));
     }, 400)
 
     return () => clearTimeout(findText)
@@ -72,7 +72,7 @@ export default function SearchBar({ className }) {
               const location = result.matches[0].key;
               const leftIndex = result.matches[0].indices[0][0];
               const rightIndex = result.matches[0].indices[0][1] + 1;
-              const slicedString = result.item[location].substring(leftIndex - 10, rightIndex + 10).trim();
+              const slicedString = result.item[location].substring(leftIndex - 20, rightIndex + 20).trim();
 
               return (
                 <Link key={index} className="searchBar__resultBox__item" to={link}>

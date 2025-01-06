@@ -7,10 +7,8 @@ import Footer from "../components/Footer";
 import commandsData from "../commands.json";
 import DocSideBar from "../components/DocSideBar/DocSideBar";
 import SearchBar from "../components/ui/SearchBar";
+// import ScrollToTop from "../components/ScrollToTop";
 import "../styles/EndUserDocsLayout.scss";
-
-
-
 
 export default function UserDocumentation() {
   const [open, setOpen] = useState(false);
@@ -73,26 +71,27 @@ export default function UserDocumentation() {
           className="documentation__sideBar"
         />
 
-        <div className="documentation__descriptionContainer">
-          <div className="documentation__description">
-            <Outlet />
-          </div>
+          <div className="documentation__descriptionContainer">
+            <div className="documentation__description">
+              <Outlet />
+              
+            </div>
 
-          <div className="documentation__tocContainer">
-            <div className="documentation__tocEntries">
-              <p>On This Page</p>
-              {headers.map((header) => (
-                <a
-                  key={header.id}
-                  href={`#${header.id}`}
-                  className="documentation__tocItem"
-                >
-                  {header.text}
-                </a>
-              ))}
+            <div className="documentation__tocContainer">
+              <div className="documentation__tocEntries">
+                <p>On This Page</p>
+                {headers.map((header) => (
+                  <a
+                    key={header.id}
+                    href={`#${header.id}`}
+                    className="documentation__tocItem"
+                  >
+                    {header.text}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
       </main>
 
       <Footer />
