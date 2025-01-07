@@ -2,11 +2,39 @@
     max-width: 80rem;
     margin: 4rem auto;
     text-align: left;
-
+    padding: 1rem;
+    
+    &__hero {
+        background-color: #f3306150;
+        background-color: #3e40b678;
+        padding: 1rem;
+        border-radius: 20px;
+        min-height: 6rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        
+        &__container {
+            max-width: 40rem;
+        }
+        
+        &__header {
+            font-family: "JetBrainsMono-Bold";
+        }
+        
+        &__paragraph {
+            display: inline-block;
+        }
+    }
+    
+    &__heroHeader {
+    }
+    
+    
     &__getStarted, &__reccomendedGuide {
         margin-bottom: 4rem;
     }
-
+    
     &__header {
         font-family: "JetBrainsMono-Bold";
         margin-bottom: 0;

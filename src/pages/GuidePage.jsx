@@ -4,6 +4,13 @@ import "../styles/GuidePage.scss"
 export default function GuidePage() {
   return (
     <main className="guide">
+      <section className="guide__hero">
+        <div className="guide__hero__container">
+          <h1 className="guide__hero__header">Welcome To Desire's Guides</h1>
+          <p className="guide__hero__paragraph">Find the best ways to maximize the most out of Desire with our user guides. Learn about how to get started with Desire, or visit our reccomended guides in both video and written formats. </p>
+        </div>
+        <img className="guide__hero__image" src="src/assets/sitting.png" alt="Standing Robot" />
+      </section>
       <section className="guide__getStarted">
         <h1 className="guide__header">Get Started</h1>
         <p className="guide__paragraph">Learn about how to get started with Desire and get the most out of your server</p>
