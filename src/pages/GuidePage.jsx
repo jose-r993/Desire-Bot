@@ -12,7 +12,7 @@ export default function GuidePage() {
         <img className="guide__hero__image" src="src/assets/sitting.png" alt="Standing Robot" />
       </section>
       <section className="guide__getStarted">
-        <h1 className="guide__header">Get Started</h1>
+        <h2 className="guide__header">Get Started</h2>
         <p className="guide__paragraph">Learn about how to get started with Desire and get the most out of your server</p>
         <div className="guide__container">
           <Card 
@@ -35,7 +35,7 @@ export default function GuidePage() {
           </div>
       </section>
       <section className="guide__reccomendedGuide">
-        <h1 className="guide__header">Reccomended Guides</h1>
+        <h2 className="guide__header">Reccomended Guides</h2>
         <p className="guide__paragraph">See the guides that are most popular for our current users</p>
         <div className="guide__container">
           <Card 
@@ -58,7 +58,7 @@ export default function GuidePage() {
           </div>
       </section>
       <section className="guide__videoGuide">
-        <h1 className="guide__header">Video Guides</h1>
+        <h2 className="guide__header">Video Guides</h2>
         <p className="guide__paragraph">Want a video format instead? See the videos we have made for our various platforms</p>
         <div className="guide__container">
           <Card 

@@ -1,12 +1,27 @@
 .guide {
     max-width: 80rem;
-    margin: 4rem auto;
+    margin: auto;
     text-align: left;
     padding: 1rem;
+    padding-top: 2rem;
+
+    @media (max-width: 768px) {
+        padding-top: 6rem;
+    }
     
     &__hero {
-        background-color: #f3306150;
-        background-color: #3e40b678;
+        background: linear-gradient(
+            to bottom right,
+            rgba(243, 48, 97, 0.6),
+            rgba(243, 48, 97, 0.4)
+            ),
+            url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill-opacity="0.2"><circle cx="50" cy="50" r="60" fill="%23f33061"/><circle cx="150" cy="150" r="40" fill="%23f33061"/></svg>');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        padding: 2rem;
+
         padding: 1rem;
         border-radius: 20px;
         min-height: 6rem;
@@ -18,31 +33,39 @@
             max-width: 40rem;
         }
         
-        &__header {
-            font-family: "JetBrainsMono-Bold";
-        }
-        
         &__paragraph {
             display: inline-block;
         }
     }
     
-    &__heroHeader {
+    &__hero__header {
+        font-family: "JetBrainsMono-Bold";
+    }
+
+    &__hero__image {
+        @media (max-width: 980px) {
+            display: none;
+        }
     }
     
-    
-    &__getStarted, &__reccomendedGuide {
-        margin-bottom: 4rem;
+    &__getStarted, &__reccomendedGuide, &__videoGuide {
+        margin-top: 3rem;
     }
     
     &__header {
         font-family: "JetBrainsMono-Bold";
+        font-size: 2rem;
         margin-bottom: 0;
+    }
+
+    &__paragraph {
+        margin-top: .5rem;
     }
     
     &__container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        gap: .5rem;
     }
 }
