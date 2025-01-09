@@ -1,9 +1,15 @@
+import { useInView } from "react-intersection-observer";
 import "../styles/Server.scss";
 
 export default function Server() {
+  const { ref, inView } = useInView({
+   triggerOnce: true,
+   threshold: .2,
+  })
+
   return (
     <section className="server">
-      <div className="server__container">
+      <div className={`server__container ${inView && 'server__container--pop-up'}`}ref={ref}>
         <div className="server__textContainer">
           <h2 className="server__header">Need Help?</h2>
           <p className="server__paragraph">

@@ -1,3 +1,5 @@
+@import "mixins";
+
 .guide {
   max-width: 80rem;
   margin: auto;
@@ -15,7 +17,6 @@
     top: 1rem;
     right: 1rem;
     min-width: 110px;
-    font-size: 16px;
     padding: 0.5rem;
 
     @media (max-width: 768px) {
@@ -53,7 +54,7 @@
   }
 
   &__hero__header {
-    font-family: "JetBrainsMono-Bold";
+    @include header-styling();
   }
 
   &__hero__image {
@@ -69,8 +70,7 @@
   }
 
   &__header {
-    font-family: "JetBrainsMono-Bold";
-    font-size: 2rem;
+    @include sub-header-styling();
     margin-bottom: 0;
   }
 

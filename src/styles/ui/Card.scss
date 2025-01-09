@@ -1,4 +1,5 @@
 @import "../variables";
+@import "../mixins";
 
 .card {
     border: solid #b1b1b179;
@@ -46,7 +47,8 @@
     }
     
     &__paragraph {
-        font-size: 14px;
+        @include paragraph-small();
+        padding: 0;
 
         @media (min-width: 1024px) {
             min-height: 126px;

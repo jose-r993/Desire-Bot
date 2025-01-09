@@ -3,8 +3,6 @@ import "../../styles/ui/Button.scss";
 
 export default function Button({ className, text, linkSrc }) {
   return (
-      <Link className={`button ${className}`} to={linkSrc}>
-        {text}
-      </Link>
+      <Link className={`button ${className}`} to={linkSrc}>{text}</Link>
       );
 }

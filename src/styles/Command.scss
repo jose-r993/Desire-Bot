@@ -9,7 +9,7 @@
   text-align: start;
   max-width: 75rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   margin: 4rem auto;
   gap: 0.5rem;
 
@@ -32,16 +32,18 @@
   }
 
   &__headerText {
-    @include sub-headerStyling();
-    padding: 0;
+    @include sub-header-styling();
     margin: 0 0 1rem;
-    font-size: 38px;
   }
 
   &__noteText {
     padding-top: 1rem;
     margin: 0;
     font-size: 21px;
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
   }
 
   &__buttonContainer {
@@ -72,36 +74,32 @@
   opacity: 0;
 }
 
-.command--fade-in-left, .command--fade-in-right {
+.command--fade-in-command {
   .command__container > *, .command__image {
     animation-fill-mode: forwards;
+    animation-name: fade-in-command;
   }
 
   .command__noteText {
-    animation-name: fade-in-left;
-    animation-duration: 1550ms;
+    animation-duration: 1750ms;
+    animation-delay: 50ms;
   }
   .command__headerText {
-    animation-name: fade-in-left;
-    animation-duration: 1600ms;
+    animation-duration: 1400ms;
+    animation-delay: 100ms;
+
   }
   .command__paragraphText {
-    animation-name: fade-in-left;
     animation-duration: 1650ms;
+    animation-delay: 200ms;
   }
   .command__buttonContainer {
-    animation-name: fade-in-left;
     animation-duration: 1800ms;
+    animation-delay: 200ms;
   }
   .command__image {
-    animation-name: fade-in-left;
-    animation-duration: 1800ms;
-  }
-
-  &.command--fade-in-right {
-    .command__container > *, .command__image {
-      animation-name: fade-in-right;
-    }
+    animation-duration: 1250ms;
+    animation-name: fade-in-image;
   }
 }
 
@@ -109,24 +107,24 @@
   display: none;
 }
 
-@keyframes fade-in-left {
+@keyframes fade-in-command {
   from {
-    transform: translateX(-100%);
+    transform: translateY(50%);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
-@keyframes fade-in-right {
+@keyframes fade-in-image {
   from {
-    transform: translateX(100%);
+    transform: translateY(20%);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }

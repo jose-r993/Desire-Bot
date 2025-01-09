@@ -9,6 +9,8 @@
     position: relative;
     max-width: 80rem;
     width: 100%;
+    opacity: 0;
+    z-index: -1;
     border-radius: 10px 10px 0 0;
     margin: auto auto 0;
     background: linear-gradient(to bottom right, #f3306199, #f3306188),
@@ -26,13 +28,13 @@
     flex-direction: column;
   }
   &__header {
-    @include sub-headerStyling();
+    @include header-styling();
     margin: 0;
     padding: 0;
     text-align: start;
   }
   &__paragraph {
-    @include paragraphStyling();
+    @include paragraph-medium();
     text-align: start;
     margin: 0;
     padding-left: 0;
@@ -52,6 +54,10 @@
   }
 }
 
+.server__container--pop-up {
+  animation: pop-up .8s forwards;
+}
+
 .server__button {
   border: none;
   border-radius: 10px;
@@ -61,6 +67,7 @@
   z-index: 0;
   transition: color 0.5s;
   max-width: 130px;
+  margin-top: 1rem;
 
   &:hover {
     color: #fff;
@@ -114,4 +121,15 @@
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+
+@keyframes pop-up {
+  0% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

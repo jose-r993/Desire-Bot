@@ -8,10 +8,7 @@ import cloud from "../assets/cloud.png";
 import "../styles/HomePage.scss";
 
 export default function HomePage() {
-  const { ref, inView} = useInView({
-    threshold: .1,
-    triggerOnce: true,
-  });
+ 
 
   return (
     <main>
@@ -23,12 +20,12 @@ export default function HomePage() {
           className="hero__balloon"
         />
         <img src={cloud} alt="white cloud" className="hero__cloud" />
-        <h3 className="hero__Header">Get the Features You Desire</h3>
+        <h3 className="hero__header">Get the Features You Desire</h3>
         <p className="hero__paragraph">
           Advanced Automation, Moderation Tools, and Custom Features to Enhance
           User Experience
         </p>
-        <div className="hero__container">
+        <div className="hero__button-container">
           <ButtonTwo className="hero__discordButton" text="Explore Features" linkSrc="/features"/>
           <Button className="hero__featuresButton" text="Add To Discord" />
         </div>

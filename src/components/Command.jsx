@@ -13,11 +13,11 @@ export default function Command({
   btnText,
 }) {
   const { ref, inView} = useInView({
-    threshold: .25,
+    threshold: .33,
     triggerOnce: true,
   });
   return (
-    <div className={`command ${reversed && "command--reverse"} ${(inView && reversed) && 'command--fade-in-right'} ${(inView && !reversed) && 'command--fade-in-left'}`} ref={ref}>
+    <div className={`command ${reversed ? "command--reverse" : ''} ${inView && 'command--fade-in-command'}`} ref={ref}>
       <div className="command__container">
         <p className="command__noteText">{noteText}</p>
         <h2 className="command__headerText">{headerText}</h2>
