@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import Button from "./ui/Button";
 import ButtonTwo from "./ui/ButtonTwo";
 import "../styles/Command.scss";
@@ -11,8 +12,12 @@ export default function Command({
   hideBtn,
   btnText,
 }) {
+  const { ref, inView} = useInView({
+    threshold: .25,
+    triggerOnce: true,
+  });
   return (
-    <div className={`command ${reversed ? "command-reverse" : ""}`}>
+    <div className={`command ${reversed && "command--reverse"} ${(inView && reversed) && 'command--fade-in-right'} ${(inView && !reversed) && 'command--fade-in-left'}`} ref={ref}>
       <div className="command__container">
         <p className="command__noteText">{noteText}</p>
         <h2 className="command__headerText">{headerText}</h2>

@@ -15,11 +15,14 @@
   &__Header {
     @include sub-headerStyling();
     max-width: 25rem;
+    animation: fade-in-hero 1600ms;
   }
   &__paragraph {
     @include paragraphStyling();
     margin-bottom: 2rem;
     max-width: 28rem;
+    animation: fade-in-hero 1s both;
+    animation-delay: 500ms;
   }
   &__container {
     min-width: 200px;
@@ -41,9 +44,13 @@
 
   &__featuresButton {
     width: 100%;
+    animation: fade-in-hero 1s both;
+    animation-delay: 500ms;
   }
   &__discordButton {
     width: 100%;
+    animation: fade-in-hero 1s both;
+    animation-delay: 500ms;
   }
 }
 
@@ -56,10 +63,6 @@
   left: 80%;
   overflow: hidden;
   @include transitionEaseSlower();
-
-  //   @media (min-width: 768px) {
-  //     background-color: red;
-  //   }
 }
 
 .hero__cloud {
@@ -70,18 +73,11 @@
   top: 250px;
   left: 0;
   @include transitionEaseSlower();
-
-  //   @media (min-width: 400px) {
-  //     top: 380px;
-  //   }
-  //   @media (min-width: 768px) {
-  //     left: 200px;
-  //   }
 }
 
 .homeBtn {
   position: absolute;
-  top: .5rem;
+  top: 1rem;
   right: 1rem;
   min-width: 110px;
   font-size: 16px;
@@ -95,4 +91,15 @@
 .container {
   max-width: 80rem;
   margin: auto;
+}
+
+@keyframes fade-in-hero {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

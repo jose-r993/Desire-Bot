@@ -13,7 +13,7 @@
   margin: 4rem auto;
   gap: 0.5rem;
 
-  &-reverse {
+  &--reverse {
     flex-direction: row-reverse;
   }
 
@@ -68,6 +68,65 @@
   }
 }
 
+.command__container > *, .command__image {
+  opacity: 0;
+}
+
+.command--fade-in-left, .command--fade-in-right {
+  .command__container > *, .command__image {
+    animation-fill-mode: forwards;
+  }
+
+  .command__noteText {
+    animation-name: fade-in-left;
+    animation-duration: 1550ms;
+  }
+  .command__headerText {
+    animation-name: fade-in-left;
+    animation-duration: 1600ms;
+  }
+  .command__paragraphText {
+    animation-name: fade-in-left;
+    animation-duration: 1650ms;
+  }
+  .command__buttonContainer {
+    animation-name: fade-in-left;
+    animation-duration: 1800ms;
+  }
+  .command__image {
+    animation-name: fade-in-left;
+    animation-duration: 1800ms;
+  }
+
+  &.command--fade-in-right {
+    .command__container > *, .command__image {
+      animation-name: fade-in-right;
+    }
+  }
+}
+
 .discord__button-hidden {
   display: none;
+}
+
+@keyframes fade-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

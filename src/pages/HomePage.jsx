@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import Feature from "../components/Feature";
 import Server from "../components/Server";
 import Button from "../components/ui/Button";
@@ -7,6 +8,11 @@ import cloud from "../assets/cloud.png";
 import "../styles/HomePage.scss";
 
 export default function HomePage() {
+  const { ref, inView} = useInView({
+    threshold: .1,
+    triggerOnce: true,
+  });
+
   return (
     <main>
       <Button className="homeBtn" text="Add Bot" />

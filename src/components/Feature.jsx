@@ -18,7 +18,7 @@ export default function Feature() {
         btnText="Testing a longer bit of string text"
         imgSrc={command4}
         hideBtn={true}
-      />
+        />
       <span className="feature__plane">
         <img src={plane} alt="plane" />
       </span>
