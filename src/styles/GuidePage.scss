@@ -1,4 +1,5 @@
 @import "mixins";
+$n: 3;
 
 .guide {
   max-width: 80rem;
@@ -43,19 +44,25 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    opacity: 0;
+    animation: fade-in-top 1s both;
 
     &__container {
       max-width: 40rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     &__paragraph {
-      display: inline-block;
+      max-width: 36rem;
     }
   }
 
   &__hero__header {
     @include header-styling();
     padding: 1rem 0 0;
+    margin: 0;
   }
 
   &__hero__image {
@@ -73,10 +80,12 @@
   &__header {
     @include sub-header-styling();
     margin-bottom: 0;
+    opacity: 0;
   }
 
   &__paragraph {
     margin-top: 0.5rem;
+    opacity: 0;
   }
 
   &__container {
@@ -84,5 +93,29 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0.5rem;
+  }
+
+  &__container > * {
+    opacity: 0;
+  }
+}
+
+.guide--animate-section {
+  h2 {
+    animation: fade-in-item 1s both;
+  }
+  p {
+    animation: fade-in-item 0.5s both;
+    animation-delay: 350ms;
+  }
+
+  .guide__container > * {
+    animation: fade-in-item 0.75s both;
+
+    @for $x from 1 through $n {
+      &:nth-child(#{$x}) {
+        animation-delay: 200ms * ($x);
+      }
+    }
   }
 }
