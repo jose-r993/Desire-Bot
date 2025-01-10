@@ -12,18 +12,26 @@ export default function Command({
   hideBtn,
   btnText,
 }) {
-  const { ref, inView} = useInView({
-    threshold: .33,
+  const { ref, inView } = useInView({
+    threshold: 0.5,
     triggerOnce: true,
   });
   return (
-    <div className={`command ${reversed ? "command--reverse" : ''} ${inView && 'command--fade-in-command'}`} ref={ref}>
+    <div
+      className={`command ${reversed ? "command--reverse" : ""} ${
+        inView && "command--fade-in-command"
+      }`}
+      ref={ref}
+    >
       <div className="command__container">
         <p className="command__noteText">{noteText}</p>
         <h2 className="command__headerText">{headerText}</h2>
         <p className="command__paragraphText">{paragraphText}</p>
         <div className="command__buttonContainer">
-          <Button text="Add To Discord" className={`discord__button ${hideBtn && "discord__button-hidden"}`} />
+          <Button
+            text="Add To Discord"
+            className={`discord__button ${hideBtn && "discord__button-hidden"}`}
+          />
           <ButtonTwo text={btnText} className="docs__button" />
         </div>
       </div>
