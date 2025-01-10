@@ -11,13 +11,13 @@
   &__header {
     @include header-styling();
     max-width: 25rem;
-    animation: fade-in-hero 1600ms;
+    animation: fade-in-item 1600ms;
   }
   &__paragraph {
     @include paragraph-medium();
     margin-bottom: 2rem;
     max-width: 28rem;
-    animation: fade-in-hero 1s both;
+    animation: fade-in-item 1s both;
     animation-delay: 500ms;
     padding: 1rem;
   }
@@ -42,12 +42,12 @@
 
   &__featuresButton {
     width: 100%;
-    animation: fade-in-hero 1s both;
+    animation: fade-in-item 1s both;
     animation-delay: 500ms;
   }
   &__discordButton {
     width: 100%;
-    animation: fade-in-hero 1s both;
+    animation: fade-in-item 1s both;
     animation-delay: 500ms;
   }
 
@@ -101,15 +101,4 @@
 .container {
   max-width: 80rem;
   margin: auto;
-}
-
-@keyframes fade-in-hero {
-  from {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }

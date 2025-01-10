@@ -13,7 +13,7 @@ export default function Command({
   btnText,
 }) {
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.4,
     triggerOnce: true,
   });
   return (
