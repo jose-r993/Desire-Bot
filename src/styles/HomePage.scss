@@ -10,7 +10,7 @@
   &__header {
     @include header-styling();
     max-width: 25rem;
-    animation: fade-in-item 1500ms both;
+    animation: fade-in-item 1000ms both ease-out;
     animation-delay: 250ms;
     opacity: 0;
   }
@@ -19,7 +19,7 @@
     margin-bottom: 2rem;
     max-width: 28rem;
     animation: fade-in-item 1s both;
-    animation-delay: 500ms;
+    animation-delay: 440ms;
     padding: 1rem;
     opacity: 0;
   }

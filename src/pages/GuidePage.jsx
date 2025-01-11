@@ -6,17 +6,17 @@ import "../styles/GuidePage.scss";
 export default function GuidePage() {
   const { ref: getStartedRef, inView: getStartedInView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.15,
   });
 
   const { ref: recommendedRef, inView: recommendedInView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.15,
   });
 
   const { ref: videoGuideRef, inView: videoGuideInView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.15,
   });
 
   return (
