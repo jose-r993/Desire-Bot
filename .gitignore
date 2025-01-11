@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -6,19 +7,30 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+=======
+logs
+*.log
+npm-debug.log*
+>>>>>>> a2857ebe7ba1754df902b5eaca9407c70d16071d
 
 node_modules
 dist
 dist-ssr
 *.local
 
+<<<<<<< HEAD
 # Editor directories and files
+=======
+>>>>>>> a2857ebe7ba1754df902b5eaca9407c70d16071d
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+<<<<<<< HEAD
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+=======
+>>>>>>> a2857ebe7ba1754df902b5eaca9407c70d16071d
