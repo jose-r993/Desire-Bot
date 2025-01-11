@@ -70,12 +70,14 @@
   }
 }
 
-.command__container > *, .command__image {
+.command__container > *,
+.command__image {
   opacity: 0;
 }
 
 .command--fade-in-command {
-  .command__container > *, .command__image {
+  .command__container > *,
+  .command__image {
     animation-fill-mode: forwards;
     animation-name: fade-in-command;
   }
@@ -87,7 +89,6 @@
   .command__headerText {
     animation-duration: 1400ms;
     animation-delay: 100ms;
-
   }
   .command__paragraphText {
     animation-duration: 1650ms;
@@ -98,7 +99,7 @@
     animation-delay: 200ms;
   }
   .command__image {
-    animation-duration: 1250ms;
+    animation-duration: 1600ms;
     animation-name: fade-in-image;
   }
 }
