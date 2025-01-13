@@ -5,8 +5,8 @@ export default function List({ className }) {
   return (
     <ul className={`list ${className}`}>
       <li className="list__item">
-        <Link className="list__links" to="/features">
-          Features
+        <Link className="list__links" to="/guide">
+          Guide
         </Link>
       </li>
       <li className="list__item">
@@ -15,8 +15,12 @@ export default function List({ className }) {
         </Link>
       </li>
       <li className="list__item">
-        <Link className="list__links" to="/guide">
-          Guide
+        <Link
+          className="list__links"
+          to="https://discord.gg/yT9MGjrtNG"
+          target="_blank"
+        >
+          Support
         </Link>
       </li>
     </ul>

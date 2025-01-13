@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import Fuse from "fuse.js";
 import SearchIcon from "../../assets/searchIcon.svg";
@@ -8,6 +8,10 @@ import "../../styles/ui/SearchBar.scss";
 export default function SearchBar({ className }) {
   const [searchText, setSearchText] = useState("");
   const [searchList, setSearchList] = useState([]);
+  const [showResults, setShowResults] = useState(false);
+
+  const containerRef = useRef(null);
+
   const options = {
     ignoreLocation: true,
     includeMatches: true,
@@ -48,8 +52,21 @@ export default function SearchBar({ className }) {
     };
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setShowResults(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className={`searchBar ${className}`}>
+    <div ref={containerRef} className={`searchBar ${className}`}>
       <img src={SearchIcon} alt="Search Icon" className="searchBar__icon" />
       <input
         type="search"
@@ -57,10 +74,11 @@ export default function SearchBar({ className }) {
         className="searchBar__input"
         placeholder="Search Documentation"
         onChange={(e) => setSearchText(e.target.value)}
+        onFocus={() => setShowResults(true)}
       />
       <kbd className="searchBar__kbd">/</kbd>
 
-      {searchList.length > 0 && (
+      {showResults && searchList.length > 0 && (
         <>
           <div className="searchBar__resultBox">
             <div className="searchBar__suggested">Suggested</div>

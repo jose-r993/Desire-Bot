@@ -15,19 +15,21 @@ export default function UserDocumentation() {
   const [headers, setHeaders] = useState([]);
   const location = useLocation();
   const commandSection = commandsData.userDocs;
-  
+
   function openNav() {
     setOpen(!open);
   }
 
   const extractHeaders = () => {
-    const descriptionElement = document.querySelector(".documentation__description");
-  
+    const descriptionElement = document.querySelector(
+      ".documentation__description"
+    );
+
     if (!descriptionElement) {
       setHeaders([]);
       return;
     }
-  
+
     const headerElements = descriptionElement.querySelectorAll("h2, h3");
     const headersArray = Array.from(headerElements).map((header) => {
       if (!header.id) {
@@ -49,7 +51,7 @@ export default function UserDocumentation() {
 
   return (
     <div className="docs">
-      <header className="documentation__stickyContainer">
+      <header className="documentation__navContainer">
         <div className="documentation__logoNameContainer">
           <Logo />
           <h2 className={`nav__desire documentation__navigationBar`}>Desire</h2>
@@ -71,27 +73,26 @@ export default function UserDocumentation() {
           className="documentation__sideBar"
         />
 
-          <div className="documentation__descriptionContainer">
-            <div className="documentation__description">
-              <Outlet />
-              
-            </div>
+        <div className="documentation__descriptionContainer">
+          <div className="documentation__description">
+            <Outlet />
+          </div>
 
-            <div className="documentation__tocContainer">
-              <div className="documentation__tocEntries">
-                <p>On This Page</p>
-                {headers.map((header) => (
-                  <a
-                    key={header.id}
-                    href={`#${header.id}`}
-                    className="documentation__tocItem"
-                  >
-                    {header.text}
-                  </a>
-                ))}
-              </div>
+          <div className="documentation__tocContainer">
+            <div className="documentation__tocEntries">
+              <p>On This Page</p>
+              {headers.map((header) => (
+                <a
+                  key={header.id}
+                  href={`#${header.id}`}
+                  className="documentation__tocItem"
+                >
+                  {header.text}
+                </a>
+              ))}
             </div>
           </div>
+        </div>
       </main>
 
       <Footer />

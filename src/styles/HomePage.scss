@@ -10,18 +10,15 @@
   &__header {
     @include header-styling();
     max-width: 25rem;
-    animation: fade-in-item 1000ms both ease-out;
-    animation-delay: 250ms;
-    opacity: 0;
+    animation: fade-in-item 1600ms;
   }
   &__paragraph {
     @include paragraph-medium();
     margin-bottom: 2rem;
     max-width: 28rem;
     animation: fade-in-item 1s both;
-    animation-delay: 440ms;
+    animation-delay: 300ms;
     padding: 1rem;
-    opacity: 0;
   }
   &__button-container {
     min-width: 200px;

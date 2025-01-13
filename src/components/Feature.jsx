@@ -18,7 +18,7 @@ export default function Feature() {
         btnText="Testing a longer bit of string text"
         imgSrc={command4}
         hideBtn={true}
-        />
+      />
       <span className="feature__plane">
         <img src={plane} alt="plane" />
       </span>
@@ -44,7 +44,6 @@ export default function Feature() {
         headerText="Customized Profile For Users to See"
         paragraphText="Users can display a customized profile that shows their role, permissions, and date joined! Unique user ID is included to avoid copycats :)"
         btnText="Learn More"
-        hideBtn={true}
         imgSrc={command5}
       />
     </>

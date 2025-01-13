@@ -55,7 +55,7 @@
 }
 
 .server__container--pop-up {
-  animation: pop-up .8s forwards;
+  animation: pop-up 0.8s forwards;
 }
 
 .server__button {
@@ -64,7 +64,7 @@
   margin-bottom: 1rem;
   position: relative;
   color: #050709;
-  z-index: 0;
+  z-index: 2;
   transition: color 0.5s;
   max-width: 130px;
   margin-top: 1rem;
@@ -127,9 +127,11 @@
   0% {
     opacity: 0;
     transform: translateY(40%);
+    z-index: -30;
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    z-index: 0;
   }
 }

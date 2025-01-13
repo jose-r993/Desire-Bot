@@ -6,13 +6,18 @@ $documentation-background-color: #b5e1fd;
   display: flex;
   flex-direction: row;
   min-height: calc(100vh - 24rem);
+  margin-top: 4rem;
 
-  &__stickyContainer {
+  &__navContainer {
     z-index: 1;
     height: 4rem;
-    background-color: color.scale($documentation-background-color, $lightness: -5%);
+    background-color: color.scale(
+      $documentation-background-color,
+      $lightness: -5%
+    );
     top: 0;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,6 +62,7 @@ $documentation-background-color: #b5e1fd;
     width: 100%;
     min-width: 0;
     gap: 3rem;
+    min-height: 50rem;
   }
 
   &__description {
@@ -99,8 +105,8 @@ $documentation-background-color: #b5e1fd;
   &__sideBar {
     position: sticky;
     top: 4rem;
-    bottom: 0;
-    height: calc(100vh - 4rem);
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
     @media (max-width: 768px) {
       display: none;
     }

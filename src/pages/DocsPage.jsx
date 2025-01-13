@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/DocsPage.scss"
+import "../styles/DocsPage.scss";
 
 export default function DocsPage() {
   return (
@@ -8,7 +8,9 @@ export default function DocsPage() {
       <header className="docs__header">
         <h1>Welcome to Desire's User Documentation</h1>
         <p>
-          Explore commands, features, and everything you need to get the most out of Desire. Whether you're a new user or a seasoned admin, we've got you covered.
+          Explore commands, features, and everything you need to get the most
+          out of Desire. Whether you're a new user or a seasoned admin, we've
+          got you covered.
         </p>
       </header>
 
@@ -34,7 +36,9 @@ export default function DocsPage() {
             </Link>
           </div>
         </div>
-        <div className="docs__quickLinks__rightContainer"><img src="src/assets/standing-icon.png" alt="Standing Helper Robot" /></div>
+        <div className="docs__quickLinks__rightContainer">
+          <img src="src/assets/standing-icon.png" alt="Standing Helper Robot" />
+        </div>
       </section>
 
       <section className="docs__overview">
@@ -60,7 +64,13 @@ export default function DocsPage() {
       </section>
 
       <footer className="docs__footer">
-        <p>Need more help? Check out our <Link to="/support">support page</Link>.</p>
+        <p>
+          Need more help? Check out our{" "}
+          <Link to="https://discord.gg/yT9MGjrtNG" target="_blank">
+            support page
+          </Link>
+          .
+        </p>
       </footer>
     </div>
   );

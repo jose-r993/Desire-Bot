@@ -21,6 +21,8 @@
   &__links {
     font-size: 16px;
     overflow: hidden;
-    color: $black;
+    color: #484848;
+    transition: color 300ms;
+    font-family: "WorkSans-Medium";
   }
 }
