@@ -2,16 +2,12 @@
 @import "mixins";
 
 .server {
-  height: 30rem;
   display: flex;
+  align-items: center;
 
   &__container {
     position: relative;
-    max-width: 80rem;
     width: 100%;
-    opacity: 0;
-    z-index: -1;
-    border-radius: 10px 10px 0 0;
     margin: auto auto 0;
     background: linear-gradient(to bottom right, #f3306199, #f3306188),
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 10 1440 300'%3E%3Cpath fill='%23e07196' fill-opacity='.3' d='M0,192L34.3,186.7C68.6,181,137,171,206,165.3C274.3,160,343,160,411,181.3C480,203,549,245,617,266.7C685.7,288,754,288,823,272C891.4,256,960,224,1029,176C1097.1,128,1166,64,1234,32C1302.9,0,1371,0,1406,0L1440,0L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z'%3E%3C/path%3E%3C/svg%3E")
@@ -28,17 +24,17 @@
     flex-direction: column;
   }
   &__header {
-    @include header-styling();
+    @include sub-header-styling();
     margin: 0;
     padding: 0;
-    text-align: start;
+    text-align: center;
   }
   &__paragraph {
     @include paragraph-medium();
-    text-align: start;
-    margin: 0;
+    text-align: center;
+    margin: auto;
     padding-left: 0;
-    max-width: 50rem;
+    max-width: 45rem;
   }
 
   &__image {
@@ -54,20 +50,15 @@
   }
 }
 
-.server__container--pop-up {
-  animation: pop-up 0.8s forwards;
-}
-
 .server__button {
   border: none;
   border-radius: 10px;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
   position: relative;
   color: #050709;
   z-index: 2;
   transition: color 0.5s;
   max-width: 130px;
-  margin-top: 1rem;
 
   &:hover {
     color: #fff;
@@ -121,17 +112,4 @@
   left: 0;
   top: 0;
   border-radius: 10px;
-}
-
-@keyframes pop-up {
-  0% {
-    opacity: 0;
-    transform: translateY(40%);
-    z-index: -30;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    z-index: 0;
-  }
 }

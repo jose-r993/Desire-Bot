@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "variables";
 
 .list {
@@ -21,7 +22,11 @@
   &__links {
     font-size: 16px;
     overflow: hidden;
-    color: #484848;
+    // color: #484848;
+    color: light-dark(
+      color.scale($color: $white, $lightness: -20%),
+      color.scale($color: $black, $lightness: 25%)
+    );
     transition: color 300ms;
     font-family: "WorkSans-Medium";
   }

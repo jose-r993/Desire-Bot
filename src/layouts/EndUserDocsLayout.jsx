@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import commandsData from "../commands.json";
 import DocSideBar from "../components/DocSideBar/DocSideBar";
 import SearchBar from "../components/ui/SearchBar";
+import Server from "../components/Server";
 // import ScrollToTop from "../components/ScrollToTop";
 import "../styles/EndUserDocsLayout.scss";
 
@@ -94,7 +95,9 @@ export default function UserDocumentation() {
           </div>
         </div>
       </main>
-
+      <div className="documentation__server-wrapper">
+        <Server />
+      </div>
       <Footer />
     </div>
   );

@@ -9,6 +9,10 @@ $color-2: #fdda55;
 $color-3: #85dff7;
 $color-5: #ebadda;
 
-
 $white: #eeeeee;
 $black: #000;
+
+@media (prefers-color-scheme: dark) {
+  $black: #eeeeee;
+  $white: #000;
+}
