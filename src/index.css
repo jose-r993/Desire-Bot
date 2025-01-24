@@ -29,18 +29,19 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: dark light;
   color: #000;
-  color-scheme: light dark;
   background-color: #dbf0ff;
   background: radial-gradient(#dbf0ff 40%, #96d0f6);
-
   scroll-padding-top: 4rem;
   scroll-behavior: smooth;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --white: #eeeeee;
+  --black: #000;
 }
 
 a {
@@ -81,15 +82,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --black: #eeeeee;
+    --white: #000;
+    background: radial-gradient(#0f2637 50%, #050f23);
+  }
+
+  a {
+    color: #d8d8d8;
   }
   a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    color: #f4f4f4;
   }
 }

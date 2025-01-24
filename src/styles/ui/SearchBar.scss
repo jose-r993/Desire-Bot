@@ -52,10 +52,13 @@
 
   &__suggested {
     font-size: 0.75rem;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     text-align: left;
     color: rgba(117, 117, 117);
-    background-color: color.scale($documentation-background-color, $lightness: -10%);
+    background-color: color.scale(
+      $documentation-background-color,
+      $lightness: -10%
+    );
   }
 
   &__resultBox {
@@ -67,7 +70,10 @@
     overflow-y: auto;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: color.scale($documentation-background-color, $lightness: -10%);
+    background-color: color.scale(
+      $documentation-background-color,
+      $lightness: -10%
+    );
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 3;
     text-align: left;
@@ -79,7 +85,10 @@
       @include paragraph-small();
 
       &:hover {
-        background-color: color.scale($documentation-background-color, $lightness: -20%);
+        background-color: color.scale(
+          $documentation-background-color,
+          $lightness: -20%
+        );
         cursor: pointer;
       }
 

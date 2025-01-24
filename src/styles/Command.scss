@@ -40,10 +40,15 @@
     padding-top: 1rem;
     margin: 0;
     font-size: 21px;
+    color: var(--black);
 
     @media (max-width: 480px) {
       font-size: 18px;
     }
+  }
+
+  &__paragraphText {
+    color: var(--black);
   }
 
   &__buttonContainer {

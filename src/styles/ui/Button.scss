@@ -9,7 +9,7 @@
   @include btn-styling();
 
   &:after {
-    background: $white;
+    background: #eeeeee;
     content: "";
     height: 155px;
     left: -75px;
@@ -29,5 +29,15 @@
   &:after {
     left: 120%;
     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .button {
+    background-color: darken($primary-color, $amount: 10%);
+  }
+
+  .button:hover {
+    background-color: darken($primary-color, $amount: 5%);
   }
 }

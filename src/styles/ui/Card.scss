@@ -7,12 +7,12 @@
   flex: 1;
   border-radius: 10px;
   text-align: left;
-  color: $black;
+  color: var(--black);
   padding: 1rem;
   transition: all 200ms;
 
   &:hover {
-    color: $black;
+    color: var(--black);
     background-color: #9bbae340;
     border: solid #b1b1b1;
   }

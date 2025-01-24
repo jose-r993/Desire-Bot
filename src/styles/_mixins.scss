@@ -5,6 +5,7 @@
   font-size: 51px;
   position: relative;
   z-index: 2;
+  color: var(--black);
 
   @media (max-width: 768px) {
     font-size: 45px;
@@ -20,6 +21,7 @@
   font-size: 40px;
   position: relative;
   z-index: 2;
+  color: var(--black);
 
   @media (max-width: 768px) {
     font-size: 36px;
@@ -34,6 +36,7 @@
   font-size: 16px;
   position: relative;
   z-index: 2;
+  color: var(--black);
 }
 @mixin paragraph-small {
   font-family: "WorkSans-Regular";
@@ -41,9 +44,10 @@
   font-size: 14px;
   position: relative;
   z-index: 2;
+  color: var(--black);
 }
 @mixin btn-styling {
-  color: $black;
+  color: var(--black);
   border-radius: 10px;
   border: none;
   padding: 1rem;
@@ -53,7 +57,7 @@
   transition: all 0.5s ease-out, color 0.15s ease-in-out;
 
   &:hover {
-    color: $white;
+    color: var(--white);
     transform: scale(1.02);
   }
 }

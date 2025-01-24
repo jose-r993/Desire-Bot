@@ -7,8 +7,14 @@
   overflow: hidden;
   position: relative;
   @include btn-styling;
+
+  &:hover {
+    background-color: darken($background-color, $amount: 20%);
+  }
 }
 
-.buttonTwo:hover {
-  background-color: darken($background-color, $amount: 20%);
+@media (prefers-color-scheme: dark) {
+  .buttonTwo {
+    background-color: darken($background-color, $amount: 40%);
+  }
 }
